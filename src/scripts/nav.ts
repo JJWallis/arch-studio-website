@@ -4,7 +4,13 @@
 // console.log(isPangram('The quick brown fox jumps over the lazy dog')); // true
 // console.log(isPangram('This is not a pangram')); // false
 
-function isPangram(str: string) {}
+function isPangram(str: string) {
+   //    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+   const lettersUsed = []
+   const strArr = str.split('')
+   console.log(strArr)
+}
 
-// initialse empty array
-// split() input str + loop over to add each letter to an array if it isn't already there
+isPangram('hey there')
+// loop over to add each letter to an array if it isn't already there
+// check length === 26
