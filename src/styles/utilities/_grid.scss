@@ -1,9 +1,5 @@
-@use 'abstracts' as *;
+@use '../abstracts/' as *;
 
-.grid-container {
+.grid-ct {
    display: grid;
-   @include mq(max-width, tablet) {
-      grid-template-columns: 1fr;
-      grid-auto-rows: auto;
-   }
 }
