@@ -7,12 +7,17 @@
 function isPangram(str: string) {
    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
    const inputArr = str.replace(/\s/g, '').toLowerCase().split('')
-   const results = inputArr.filter((letter) =>
-      alphabet.find((alphaLetter) => alphaLetter === letter)
-   )
-   console.log(alphabet)
-   console.log(inputArr)
+   const results = [
+      ...new Set(
+         inputArr.filter((letter) =>
+            alphabet.find((alphaLetter) => alphaLetter === letter)
+         )
+      ),
+   ]
+   //    console.log(alphabet)
+   //    console.log(inputArr)
+   //    console.log(results.length)
    return results.length === 26 ? true : false
 }
 
-isPangram('HEY THERE')
+console.log(isPangram(''))
