@@ -5,11 +5,13 @@
 // console.log(isPangram('This is not a pangram')); // false
 
 function isPangram(str: string) {
-   //    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-   const lettersUsed = []
+   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
    const strArr = str.replace(/\s/g, '').toLowerCase().split('')
+   const results = strArr.filter(
+      (letter) => !alphabet.find((usedLetter) => usedLetter === letter)
+   )
    console.log(strArr)
-   return lettersUsed.length === 26 ? true : false
+   return results.length === 26 ? true : false
 }
 
 isPangram('hey there')
