@@ -1,14 +1,9 @@
-// pangram check function - Pangram is a str or sentence which contains all letters of English alphabet at least once
-// isPangram(str) - returns either true if str passed is Pangram or false if not
-// Gotchas - str which contains capitals works with str that doesn't | str which contains spaces - trim before checking
-// console.log(isPangram('The quick brown fox jumps over the lazy dog')); // true
-// console.log(isPangram('This is not a pangram')); // false
-// Solution: split(' ') = removes all spaces | match original str - join() + sort() as well | match() method (regex arr) | size prop on Set()
+// getUsers - returns only names + email of users whose name contain letter k (still as arr of objs)
 
-function isPangram(str: string) {
-   //    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-   const processedStr = new Set(str.toLowerCase().match(/[a-z]/gi))
-   return processedStr.size === 26
+async function getUsers(endpoint: string) {
+   const response = await fetch(endpoint)
+   if (!response.ok) throw new Error(`fetch failed: ${response.status}`)
+   const data = await response.json()
 }
 
-console.log(isPangram('The quick brown fox jumps over the lazy dog'))
+console.log(getUsers('https://jsonplaceholder.typicode.com/users'))
