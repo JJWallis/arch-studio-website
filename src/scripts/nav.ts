@@ -6,13 +6,13 @@
 
 function isPangram(str: string) {
    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
-   const strArr = str.replace(/\s/g, '').toLowerCase().split('')
-   const results = strArr.filter(
-      (letter) => !alphabet.find((usedLetter) => usedLetter === letter)
+   const inputArr = str.replace(/\s/g, '').toLowerCase().split('')
+   const results = inputArr.filter((letter) =>
+      alphabet.find((alphaLetter) => alphaLetter === letter)
    )
-   console.log(strArr)
+   console.log(alphabet)
+   console.log(inputArr)
    return results.length === 26 ? true : false
 }
 
-isPangram('hey there')
-// loop over to add each letter to an array if it isn't already there
+isPangram('HEY THERE')
