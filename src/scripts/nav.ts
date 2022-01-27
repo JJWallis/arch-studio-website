@@ -3,19 +3,12 @@
 // Gotchas - str which contains capitals works with str that doesn't | str which contains spaces - trim before checking
 // console.log(isPangram('The quick brown fox jumps over the lazy dog')); // true
 // console.log(isPangram('This is not a pangram')); // false
-// Solution: split(' ') = removes all spaces | match original str - join() + sort() as well
+// Solution: split(' ') = removes all spaces | match original str - join() + sort() as well | match() method (regex arr) | size prop on Set()
 
 function isPangram(str: string) {
-   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
-   const inputArr = str.replace(/\s/g, '').toLowerCase().split('')
-   const results = [
-      ...new Set(
-         inputArr.filter((letter) =>
-            alphabet.find((alphaLetter) => alphaLetter === letter)
-         )
-      ),
-   ]
-   return results.length === 26 ? true : false
+   //    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+   const processedStr = new Set(str.toLowerCase().match(/[a-z]/gi))
+   return processedStr.size === 26
 }
 
 console.log(isPangram('The quick brown fox jumps over the lazy dog'))
