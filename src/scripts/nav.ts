@@ -3,6 +3,7 @@
 // Gotchas - str which contains capitals works with str that doesn't | str which contains spaces - trim before checking
 // console.log(isPangram('The quick brown fox jumps over the lazy dog')); // true
 // console.log(isPangram('This is not a pangram')); // false
+// Solution: split(' ') = removes all spaces | match original str - join() + sort() as well
 
 function isPangram(str: string) {
    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
@@ -14,10 +15,7 @@ function isPangram(str: string) {
          )
       ),
    ]
-   //    console.log(alphabet)
-   //    console.log(inputArr)
-   //    console.log(results.length)
    return results.length === 26 ? true : false
 }
 
-console.log(isPangram(''))
+console.log(isPangram('The quick brown fox jumps over the lazy dog'))
