@@ -1,4 +1,4 @@
-@use 'abstracts' as *;
+@use '../abstracts/' as *;
 
 .skip-to-content {
    @include position(absolute, $z-index: 9999) {

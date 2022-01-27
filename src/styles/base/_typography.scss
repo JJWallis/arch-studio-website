@@ -1,4 +1,4 @@
-@use 'abstracts' as *;
+@use '../abstracts/' as *;
 
 body {
    font: var(--fw-regular) var(--fs-100) / var(--lh-100) var(--ff-pm);
