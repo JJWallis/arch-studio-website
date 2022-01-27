@@ -1,0 +1,35 @@
+@use 'abstracts' as *;
+
+.header {
+   @include m(pm) {
+      padding-block: 2rem;
+      @include mq(min-width, tablet) {
+         padding-block: 1.3rem;
+      }
+
+      @include e(content) {
+         position: relative;
+         @include mq(min-width, tablet) {
+            @include flexy($just: space-between, $align: center);
+         }
+      }
+
+      @include e(btn) {
+         @include m(mb) {
+            @include position(absolute, $z-index: 9995, $width: 90%) {
+               left: 50%;
+               transform: translateX(-50%);
+            }
+            @include mq(min-width, tablet) {
+               display: none;
+            }
+         }
+
+         @include m(wd) {
+            @include mq(max-width, tablet) {
+               display: none;
+            }
+         }
+      }
+   }
+}

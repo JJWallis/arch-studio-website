@@ -1,0 +1,51 @@
+@use 'abstracts' as *;
+
+.hamburger--btn {
+   display: none;
+   @include mq(max-width, tablet) {
+      display: block;
+      padding: 1em 2em 1em 0;
+      @include position(absolute, $z-index: 9000) {
+         top: 50%;
+         transform: translateY(-50%);
+         right: 0;
+      }
+   }
+}
+
+.hamburger {
+   @include mq(max-width, tablet) {
+      display: block;
+      position: relative;
+
+      &::before,
+      &::after {
+         position: absolute;
+         border-radius: 1em;
+         background-color: hsl(var(--clr-pure-black));
+         display: block;
+         width: 2em;
+         height: 2px;
+         left: 0;
+         right: 0;
+         transition: transform 250ms ease-in-out;
+      }
+
+      @include p-el(before) {
+         bottom: 3px;
+      }
+
+      @include p-el(after) {
+         top: 3px;
+      }
+
+      &[data-visible='true'] {
+         &::before {
+            transform: rotate(46deg) translate(9px, 2.5px);
+         }
+         &::after {
+            transform: rotate(-46deg) translate(3px, 3px);
+         }
+      }
+   }
+}

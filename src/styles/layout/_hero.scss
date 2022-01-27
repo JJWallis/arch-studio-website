@@ -1,0 +1,40 @@
+@use 'abstracts' as *;
+
+.hero {
+   position: relative;
+   width: 85%;
+   @include mq(min-width, tablet) {
+      width: 90%;
+      padding-left: clamp(2rem, 6vw, 5rem);
+   }
+   @include mq(max-width, tablet) {
+      margin-inline: auto;
+   }
+   @include mq(min-width, ultra-wide) {
+      padding-left: clamp(6rem, 6vw, 10rem);
+   }
+
+   @include m(stories) {
+      @include mq(min-width, tablet) {
+         background-color: transparent;
+         position: relative;
+         grid-column: 1 / 2;
+         grid-row: 1 / 2;
+
+         @include m(bg) {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+         }
+      }
+
+      @include e(subtitle) {
+         margin-bottom: 1rem;
+      }
+
+      @include e(credits) {
+         & > strong {
+            margin-left: 0.8rem;
+         }
+      }
+   }
+}

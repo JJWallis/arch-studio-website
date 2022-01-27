@@ -1,0 +1,9 @@
+@use 'abstracts' as *;
+
+.grid-container {
+   display: grid;
+   @include mq(max-width, tablet) {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+   }
+}

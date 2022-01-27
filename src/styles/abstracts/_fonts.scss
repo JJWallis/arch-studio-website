@@ -1,0 +1,33 @@
+@use 'font-sizes' as *;
+
+@each $screen-size, $map in $type-scale {
+   @if $screen-size == mobile {
+      @each $feature, $nested-map in $map {
+         @if $feature == size {
+            @each $property, $value in $nested-map {
+               .#{$property} {
+                  font-size: var(--#{$property});
+               }
+            }
+         } @else if $feature == line-height {
+            @each $property, $value in $nested-map {
+               .#{$property} {
+                  line-height: var(--#{$property});
+               }
+            }
+         } @else if $feature == weight {
+            @each $property, $value in $nested-map {
+               .#{$property} {
+                  font-weight: var(--#{$property});
+               }
+            }
+         } @else {
+            @each $property, $value in $nested-map {
+               .#{$property} {
+                  letter-spacing: var(--#{$property});
+               }
+            }
+         }
+      }
+   }
+}

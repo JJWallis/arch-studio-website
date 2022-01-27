@@ -1,0 +1,14 @@
+@use 'abstracts' as *;
+
+.skip-to-content {
+   @include position(absolute, $z-index: 9999) {
+      left: 50%;
+   }
+   text-align: var(--center);
+   transform: translate(-50%, -100%);
+   transition: transform var(--btn-transition);
+   &:focus,
+   &:hover {
+      transform: translate(-50%, 0%);
+   }
+}

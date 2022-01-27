@@ -1,0 +1,74 @@
+@use 'abstracts' as *;
+
+.footer {
+   @include m(pm) {
+      padding: var(--ct-padding-footer);
+   }
+}
+
+.grid-container {
+   @include m(footer) {
+      grid-template-areas:
+         'logo'
+         'social'
+         'nav'
+         'cta'
+         'copyright';
+      gap: 2rem;
+
+      @include mq(max-width, tablet) {
+         place-items: center;
+      }
+
+      @include mq(min-width, tablet) {
+         grid-template-columns: auto 1fr auto;
+         grid-template-rows: repeat(2, auto) 1fr auto;
+         grid-template-areas:
+            'logo . cta'
+            'nav nav .'
+            '. . .'
+            'social . copyright';
+      }
+
+      @include mq(min-width, desktop) {
+         gap: 0 7rem;
+         grid-template-rows: auto 1fr auto;
+         grid-template-areas:
+            'logo nav cta'
+            '. nav .'
+            'social . copyright';
+      }
+
+      @include e(logo) {
+         grid-area: logo;
+      }
+
+      @include e(social) {
+         grid-area: social;
+      }
+
+      @include e(nav) {
+         grid-area: nav;
+         @include mq(max-width, tablet) {
+            margin-bottom: 4rem;
+         }
+         @include mq(min-width, desktop) {
+            grid-row: 1 / -1;
+         }
+      }
+
+      @include e(cta) {
+         grid-area: cta;
+         @include mq(max-width, tablet) {
+            margin-left: -3rem;
+         }
+         @include mq(min-width, tablet) {
+            @include flexy($dir: column, $align: center);
+         }
+      }
+
+      @include e(copyright) {
+         grid-area: copyright;
+      }
+   }
+}

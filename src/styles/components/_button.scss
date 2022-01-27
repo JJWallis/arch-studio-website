@@ -1,0 +1,52 @@
+@use 'abstracts' as *;
+
+.btn {
+   display: inline-block;
+   @include m(bg) {
+      padding: 1em 2em;
+      transition: background-color var(--btn-transition),
+         color var(--btn-transition);
+
+      @include m(dark) {
+         &:hover {
+            background-color: hsl(var(--clr-light-grey-btn));
+            color: hsl(var(--clr-pure-black));
+         }
+      }
+
+      @include m(light) {
+         &:hover {
+            background-color: hsl(var(--clr-pure-white) / 0.8);
+            color: hsl(var(--clr-pure-black));
+         }
+      }
+   }
+
+   @include m(text) {
+      position: relative;
+      @include p-el(after) {
+         right: -55px;
+         top: 50%;
+         transform: translateY(-40%);
+      }
+      &:hover {
+         text-decoration: underline;
+      }
+
+      @include m(dark) {
+         @include p-el(after, url('../assets/shared/desktop/arrow.svg'));
+      }
+
+      @include m(light) {
+         @include p-el(after, url('../assets/shared/desktop/arrow-white.svg'));
+      }
+
+      @include m(story) {
+         width: 100%;
+         &::after {
+            right: 0;
+            transform: translateY(-50%);
+         }
+      }
+   }
+}
