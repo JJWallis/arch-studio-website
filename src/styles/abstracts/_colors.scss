@@ -1,10 +1,12 @@
 $colors: (
-   accent-orange: 28 100% 79%,
-   accent-pink: 329 36% 59%,
-   accent-blue: 229 100% 67%,
-   pure-black: 0 0% 0%,
-   pure-white: 0 0% 100%,
-   light-grey-body: 0 0% 50%,
-   light-grey-card: 0 0% 95%,
-   light-grey-btn: 0 0% 86%,
+   dark-blue: 225 13% 12%,
+   dark-grey: 226 6% 40%,
+   medium-grey: 223 7% 53%,
+   light-grey: 225 17% 82%,
+   very-light-grey: 230 21% 95%,
+   error-red: 0 68% 61%,
 );
+
+body {
+   background-color: hsl(var(--clr-dark-grey));
+}
