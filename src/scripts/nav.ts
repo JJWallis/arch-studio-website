@@ -2,14 +2,19 @@
 
 async function getUsers(endpoint: string) {
    const response = await fetch(endpoint)
-   if (!response.ok) throw new Error(`fetch failed: ${response.status}`)
    const data = await response.json()
    const users = data
       .filter((user) => user.name.toLowerCase().includes('k'))
-      .map((user) => `${user.name} | (${user.email})`)
-
-   console.log(data)
-   console.log(users)
+      .map(({ name, email }) => {
+         return { name, email }
+      })
+   return users
 }
 
-getUsers('https://jsonplaceholder.typicode.com/users')
+;(async function () {
+   try {
+      console.log(await getUsers('https://jsonplaceholder.typicode.com/users'))
+   } catch (error) {
+      console.log(error.message)
+   }
+})()
