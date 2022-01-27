@@ -7,10 +7,10 @@
 function isPangram(str: string) {
    //    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
    const lettersUsed = []
-   const strArr = str.split('')
+   const strArr = str.replace(/\s/g, '').toLowerCase().split('')
    console.log(strArr)
+   return lettersUsed.length === 26 ? true : false
 }
 
 isPangram('hey there')
 // loop over to add each letter to an array if it isn't already there
-// check length === 26
