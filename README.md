@@ -21,9 +21,16 @@ This is a solution to the [Arch Studio multi-page website challenge](https://www
 
 Your users should be able to:
 
+-  View the optimal layout for each page depending on their device's screen size
+-  See hover states for all interactive elements throughout the site
+-  Receive an error message when the contact form is submitted if:
+   -  The Name, Email or Message fields are empty should show "Can't be empty"
+   -  The Email is not formatted correctly should show "Please use a valid email address"
+-  Bonus: View actual locations on the contact page map (we recommend Leaflet JS for this)
+
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
@@ -38,40 +45,32 @@ Your users should be able to:
 -  Flexbox
 -  CSS Grid
 -  Mobile-first workflow
--  [React](https://reactjs.org/) - JS library
--  [Styled Components](https://styled-components.com/) - For styles
 -  Sass - CSS preprocessor
 
 ### What I learned
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+
 ```
 
 ```css
-.proud-of-this-css {
-   color: papayawhip;
-}
+
 ```
 
 ```js
-const proudOfThisFunc = () => {
-   console.log('🎉')
-}
+
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
 ### Useful resources
 
--  [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+-  [Example resource 1](https://www.example.com) -
 
 ## Author
 
--  Website - [Joshua Jameson-Wallis](https://joshuajamesonwallis.com)
--  Linkedin - [Joshua Jameson-Wallis]()
+-  Website - [Joshua Jameson-Wallis](https://www.joshuajamesonwallis.com/)
+-  Linkedin - [Joshua Jameson-Wallis](www.linkedin.com/in/joshua-jameson-wallis)
 
 ###### TODO
 
