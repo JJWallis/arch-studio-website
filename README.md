@@ -78,10 +78,10 @@ Web - `request response model` | DNS - special server, browser makes request to 
 
 Client side validation - https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
 
-Short circuiting -
+Short circuiting - if the first operand is false (&&) JavaScript will short-circuit and not even look at the second operand
 
-Number.isFinite() - positiveInfinity + negativeInfinity |
+Number.isFinite() - positiveInfinity + negativeInfinity
 
-Arrays - Splice() params, slice() return,
+Arrays - Splice() params - starting index + optional delete number + optional els to insert as unlimited num, slice() - returns a shallow copy of elements from the original array (ones we slice out) | ref types els in original array copied still refer to same val
 
 DOM -
