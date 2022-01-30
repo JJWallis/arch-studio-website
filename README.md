@@ -74,8 +74,4 @@ Your users should be able to:
 
 ###### TODO
 
-HTML:
-
-CSS:
-
-JS:
+Web - `request response model` |
