@@ -79,3 +79,9 @@ Web - `request response model` | DNS - special server, browser makes request to 
 Client side validation - https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
 
 Short circuiting -
+
+Number.isFinite() - positiveInfinity + negativeInfinity |
+
+Arrays - Splice() params, slice() return,
+
+DOM -
