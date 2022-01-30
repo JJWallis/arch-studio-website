@@ -74,4 +74,4 @@ Your users should be able to:
 
 ###### TODO
 
-Web - `request response model` | DNS - special server, browser makes request to here + DNS maps to URL | url converted into ip address + port number accessed on server (same local host one)
+Web - `request response model` | DNS - special server, browser makes request to here + DNS maps to URL | url converted into ip address + port number (identify specific service running on server) accessed on server (same local host one) |
