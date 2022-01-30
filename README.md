@@ -74,4 +74,4 @@ Your users should be able to:
 
 ###### TODO
 
-Web - `request response model` | DNS - special server, browser makes request to here + DNS maps to URL | url converted into ip address + port number (identify specific service running on server) accessed on server (same local host one) | Hyper Text Transfer Protocol (system of rules allowing 2+ parties to communicate - client + server) | request - start line (HTTP method, target URL + HTTP version)
+Web - `request response model` | DNS - special server, browser makes request to here + DNS maps to URL | url converted into ip address + port number (identify specific service running on server) accessed on server (same local host one) | Hyper Text Transfer Protocol (system of rules allowing 2+ parties to communicate - client + server) | request - start line (HTTP method, target URL + HTTP version), headers - info about request itself (browser used, host name), body - contains data sending (post) |
