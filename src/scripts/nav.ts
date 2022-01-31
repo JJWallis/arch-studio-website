@@ -3,9 +3,11 @@
 // ex: console.log(decode('3w2i4u')); // wwwiiuuuu
 
 function encode(input: string) {
-   const inputArr = input.split('').sort()
+   const inputArr = input
+      .replace(/(\w)\1+/g, (match) => `${match.length} ${match[0]}`)
+      .split(' ')
+      .join('')
    console.log(inputArr)
-   console.log(inputArr.filter((item, idx, arr) => item === arr[idx + 1]))
 }
 
 console.log(encode('wwwiiuuuu')) // 3w2i4u
