@@ -1,17 +1,11 @@
-function encode(input: string) {
-   return input
-      .replace(/(\w)\1+/g, (match) => `${match.length} ${match[0]}`)
-      .split(' ')
-      .join('')
+// remove duplicates from arr with reduce
+
+function removeDuplicateValues(arr: string[]) {
+   return arr.reduce((prevReturn, curr, idx) => {
+      return undefined
+   }, [])
 }
 
-encode('wwwiiuuuu')
-
-function decode(input: string) {
-   return input.replace(/(\d+)(\w)/g, (x, y, z) => {
-      console.log(x, y, z)
-      return z.repeat(y)
-   })
-}
-
-decode('3w2i4u')
+console.log(
+   removeDuplicateValues(['one', 'two', 'one', 'three', 'three', 'two'])
+) // ['one','two','three']
