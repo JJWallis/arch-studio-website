@@ -1,8 +1,8 @@
 // remove duplicates from arr with reduce
 
 function removeDuplicateValues(arr: string[]) {
-   return arr.reduce((prevReturn, curr, idx) => {
-      return undefined
+   return arr.reduce((acc, curr) => {
+      return acc.includes(curr) ? acc : [...acc, curr]
    }, [])
 }
 
