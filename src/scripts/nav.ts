@@ -1,13 +1,17 @@
 function encode(input: string) {
-   const inputArr = input
+   return input
       .replace(/(\w)\1+/g, (match) => `${match.length} ${match[0]}`)
       .split(' ')
       .join('')
-   console.log(inputArr)
 }
 
-console.log(encode('wwwiiuuuu')) // 3w2i4u
+encode('wwwiiuuuu')
 
-function decode(input: string) {}
+function decode(input: string) {
+   return input.replace(/(\d+)(\w)/g, (x, y, z) => {
+      console.log(x, y, z)
+      return z.repeat(y)
+   })
+}
 
-console.log(decode('3w2i4u')) // wwwiiuuuu
+decode('3w2i4u')
