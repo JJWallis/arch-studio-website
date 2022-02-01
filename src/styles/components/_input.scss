@@ -1,0 +1,20 @@
+@use '../abstracts/' as *;
+
+.input {
+   padding: 0.8rem 1.5rem;
+   border-bottom: 3px solid rgba(black, 0);
+   transition: border 0.2s ease-in-out;
+   &::placeholder {
+      color: hsl(var(--clr-light-grey));
+   }
+
+   &:focus,
+   &:hover {
+      border-bottom: 3px solid black;
+   }
+
+   @include m(text-area) {
+      padding-block: 4rem;
+      resize: none;
+   }
+}
