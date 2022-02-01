@@ -1,1 +1,11 @@
 @use '../abstracts/' as *;
+
+.btn {
+   display: inline-block;
+   padding: 1rem;
+   background-color: hsl(var(--clr-dark-blue));
+   color: white;
+   @include m(link) {
+      padding: 1.2rem;
+   }
+}
