@@ -6,17 +6,31 @@
    background-color: hsl(var(--clr-dark-blue));
    color: white;
    @include bg-img('../assets/icons/icon-arrow-white.svg');
+   transition: background-color 0.2s ease-in-out;
+   &:hover {
+      background-color: hsl(var(--clr-dark-grey));
+   }
 
    @include m(link) {
       padding: 1.8rem 4.7rem 1.8rem 2.3rem;
       background-position: 90% center;
    }
 
-   @include m(submit) {
+   @include m(square) {
+      width: 70px;
+      height: 70px;
       background-position: center;
    }
 
    @include m(number) {
-      background-image: none;
+      color: hsl(var(--clr-dark-grey));
+      background: none;
+      &:hover {
+         background-color: hsl(var(--clr-light-grey));
+      }
+      .active & {
+         background-color: hsl(var(--clr-dark-blue));
+         color: white;
+      }
    }
 }
