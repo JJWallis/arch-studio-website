@@ -6,6 +6,10 @@
    background-color: hsl(var(--clr-dark-blue));
    color: white;
    @include m(link) {
-      padding: 1.2rem;
+      padding: 1.8rem 4.7rem 1.8rem 2.3rem;
+      @include bg-img(
+         '../assets/icons/icon-arrow-white.svg',
+         $position: 90% center
+      );
    }
 }
