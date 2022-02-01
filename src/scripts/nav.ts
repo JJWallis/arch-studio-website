@@ -1,9 +1,8 @@
-// implement map() with reduce()
-// performs callback func on arr
-// console.log(map([1, 2, 3], (v => v + 1))); = [2, 3, 4]
+// implement flatten nested array using recursive reduce
+// console.log(makeFlat(["one", ["two", "three"]], ["four", ["five"]]))
 
-function map(arr: number[], callback: (v: number) => number) {
-   return arr.reduce((acc, curr) => [...acc, callback(curr)], [])
+function makeFlat(arrOne: [string, string[]], arrTwo: [string, string[]]) {
+   return arrOne.flat()
 }
 
-console.log(map([1, 2, 3], (v: number) => v + 1))
+console.log(makeFlat(['one', ['two', 'three']], ['four', ['five']]))
