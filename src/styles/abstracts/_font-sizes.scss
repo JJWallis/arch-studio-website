@@ -1,17 +1,20 @@
 $type-scale: (
    mobile: (
       size: (
-         fs-500: 2.6667rem,
-         fs-400: 1.6rem,
-         fs-300: 1.2rem,
+         fs-500: 12.5rem,
+         // h1
+         fs-400: 5rem,
+         // h1
+         fs-300: 3.5rem,
+         // h2
          fs-200: 1.125rem,
          // h3
          fs-100: 0.9375rem,
       ),
       line-height: (
-         lh-500: 1.2,
-         lh-400: 1.041667,
-         lh-300: 1.3889,
+         lh-500: 1,
+         lh-400: 1,
+         lh-300: 1,
          lh-200: 1.3889,
          lh-100: 1.6667,
       ),
@@ -21,7 +24,9 @@ $type-scale: (
          fw-regular: 400,
       ),
       character-spacing: (
-         cs-500: 4.17px,
+         cs-500: -5px,
+         cs-400: -2px,
+         cs-300: -2px,
       ),
    ),
    tablet: (
