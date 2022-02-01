@@ -1,11 +1,9 @@
-// remove duplicates from arr with reduce
+// implement map() with reduce()
+// performs callback func on arr
+// console.log(map([1, 2, 3], (v => v + 1))); = [2, 3, 4]
 
-function removeDuplicateValues(arr: string[]) {
-   return arr.reduce((acc, curr) => {
-      return acc.includes(curr) ? acc : [...acc, curr]
-   }, [])
-}
+const callback = (v: number) => v + 1
 
-console.log(
-   removeDuplicateValues(['one', 'two', 'one', 'three', 'three', 'two'])
-) // ['one','two','three']
+function map(arr: number[], callback: (v: number) => number) {}
+
+console.log(map([1, 2, 3], callback))
