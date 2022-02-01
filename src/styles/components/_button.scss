@@ -5,11 +5,18 @@
    padding: 1rem;
    background-color: hsl(var(--clr-dark-blue));
    color: white;
+   @include bg-img('../assets/icons/icon-arrow-white.svg');
+
    @include m(link) {
       padding: 1.8rem 4.7rem 1.8rem 2.3rem;
-      @include bg-img(
-         '../assets/icons/icon-arrow-white.svg',
-         $position: 90% center
-      );
+      background-position: 90% center;
+   }
+
+   @include m(submit) {
+      background-position: center;
+   }
+
+   @include m(number) {
+      background-image: none;
    }
 }
