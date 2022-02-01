@@ -1,10 +1,14 @@
-// implement flatten nested array using recursive reduce
-// console.log(makeFlat(["one", ["two", "three"]], ["four", ["five"]]))
+// make rows cols
+// transposeMatrix([[1,2,3], [1,2,3], [1,2,3]]) returns [[1,1,1], [2,2,2], [3,3,3]]
 
-function makeFlat(arrOne: any) {
-   return arrOne.reduce((acc, curr) => {
-      return Array.isArray(curr) ? [...acc, ...makeFlat(curr)] : [...acc, curr]
-   }, [])
+function transposeMatrix(arr: any) {
+   return arr
 }
 
-console.log(makeFlat(['one', [['two', 'three']]]))
+console.log(
+   transposeMatrix([
+      [1, 2, 3],
+      [1, 2, 3],
+      [1, 2, 3],
+   ])
+)
