@@ -1,10 +1,11 @@
-function isPangram(str: string) {
-   const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-   const validated = str.toLowerCase().split(' ').join('').split('').sort()
-
-   console.log(alphabet)
-   console.log(validated)
-   return true || false
+async function getUsers(url: string) {
+   try {
+      const data = await fetch(url)
+      if (!data.ok) throw new Error('Failed to fetch users')
+      const results = data.json()
+   } catch (error) {
+      console.error(error.message)
+   }
 }
 
-console.log(isPangram('The quick brown fox jumps over the lazy dog'))
+console.log(getUsers('https://jsonplaceholder.typicode.com/users'))
