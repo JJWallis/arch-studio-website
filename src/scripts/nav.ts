@@ -1,4 +1,6 @@
-function transposeMatrix(arr: number[][]) {}
+function transposeMatrix(arr: number[][]) {
+   return arr.map((_, idx) => arr.map((val) => val[idx]))
+}
 
 console.log(
    transposeMatrix([
