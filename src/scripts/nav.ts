@@ -1,11 +1,10 @@
-function transposeMatrix(arr: number[][]) {
-   return arr.map((_, idx) => arr.map((val) => val[idx]))
+function isPangram(str: string) {
+   const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+   const validated = str.toLowerCase().split(' ').join('').split('').sort()
+
+   console.log(alphabet)
+   console.log(validated)
+   return true || false
 }
 
-console.log(
-   transposeMatrix([
-      [1, 2, 3],
-      [1, 2, 3],
-      [1, 2, 3],
-   ])
-)
+console.log(isPangram('The quick brown fox jumps over the lazy dog'))
