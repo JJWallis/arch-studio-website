@@ -1,14 +1,11 @@
-// number divisble by 3 = pling
-// number divisble by 5 = plang
-// number divisble by 7= plong
-// return num itself in other cases
+// str which all letters are present only once
 
-function toRainLanguage(input: number) {
-   let output = ''
-   if (input % 3 === 0) output += 'Pling'
-   if (input % 5 === 0) output += 'Plang'
-   if (input % 7 === 0) output += 'Plong'
-   return output || input
+function isIsogram(input: string) {
+   const stringToLowerCase = input.toLowerCase()
+   const letters = stringToLowerCase.split('')
+   return letters.every(
+      (letter, idx) => stringToLowerCase.indexOf(letter) === idx
+   )
 }
 
-console.log(toRainLanguage(21))
+console.log(isIsogram('Dermatoglyphics')) // true
