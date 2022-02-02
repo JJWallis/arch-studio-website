@@ -1,15 +1,14 @@
-async function getUsers(url: string) {
-   try {
-      const data = await fetch(url)
-      if (!data.ok) throw new Error('Failed to fetch users')
-      const results = await data.json()
-      const users = results.map(
-         ({ name, email }: any) => name.includes('k') && { name, email }
-      )
-      console.log(users)
-   } catch (error) {
-      console.error(error.message)
-   }
+// number divisble by 3 = pling
+// number divisble by 5 = plang
+// number divisble by 7= plong
+// return num itself in other cases
+
+function toRainLanguage(input: number) {
+   let output = ''
+   if (input % 3 === 0) output += 'Pling'
+   if (input % 5 === 0) output += 'Plang'
+   if (input % 7 === 0) output += 'Plong'
+   return output || input
 }
 
-console.log(getUsers('https://jsonplaceholder.typicode.com/users'))
+console.log(toRainLanguage(21))
