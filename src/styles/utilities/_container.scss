@@ -1,10 +1,6 @@
 @use '../abstracts/' as *;
 
 .container-wrapper {
-   max-width: 1200px;
+   width: min(90%, 1200px);
    margin-inline: auto;
-   width: 85%;
-   @include mq(min-width, tablet) {
-      width: 90%;
-   }
 }
