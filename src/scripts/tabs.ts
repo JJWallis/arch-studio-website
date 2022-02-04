@@ -23,6 +23,9 @@ function handleTabClick(e: Event) {
       .closest('[role="tab"]')
       .getAttribute('aria-controls')
    const hiddenContentBody = document.getElementById(hiddenContent)
+   document
+      .querySelectorAll('[role="tabpanel"]')
+      .forEach((panel) => panel.setAttribute('hidden', ''))
    hiddenContentBody.removeAttribute('hidden')
 }
 
