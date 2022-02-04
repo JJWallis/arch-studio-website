@@ -19,7 +19,11 @@ function changeTabFocus(e: Event) {
 
 function handleTabClick(e: Event) {
    const target = e.target as HTMLElement
-   const content = target.closest('[role="tab"]').getAttribute('aria-controls')
+   const hiddenContent = target
+      .closest('[role="tab"]')
+      .getAttribute('aria-controls')
+   const hiddenContentBody = document.getElementById(hiddenContent)
+   hiddenContentBody.removeAttribute('hidden')
 }
 
 tabList.addEventListener('keydown', changeTabFocus)
