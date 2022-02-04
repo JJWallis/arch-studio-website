@@ -17,7 +17,11 @@ function changeTabFocus(e: Event) {
    targetBtn.focus()
 }
 
-function handleTabClick(e: Event) {}
+function handleTabClick(e: Event) {
+   const target = e.target as HTMLButtonElement
+   const attr = target.getAttribute('aria-controls')
+   console.log(attr)
+}
 
 tabList.addEventListener('keydown', changeTabFocus)
 tabs.forEach((tab) => tab.addEventListener('click', handleTabClick))
