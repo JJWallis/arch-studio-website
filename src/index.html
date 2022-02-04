@@ -14,7 +14,7 @@
       <script src="./scripts/nav.ts" defer></script>
    </head>
 
-   <body class="home">
+   <body class="home" data-visible="false">
       <a href="#main-content" class="skip-to-content sr-only"
          >Skip to content</a
       >
@@ -64,7 +64,7 @@
                   >See Our Portfolio</a
                >
             </div>
-            <!-- <div id="seraph-project" class="hero-pm__body hero-pm__body-2">
+            <!-- <div id="seraph-project" class="hero-pm__body hero-pm__body-2 sr-only">
                <h2>Seraph Station</h2>
                <p class="desc">
                   The Seraph Station project challenged us to design a unique
@@ -73,7 +73,7 @@
                </p>
                <a href="./portfolio.html">See Our Portfolio</a>
             </div> -->
-            <!-- <div id="federal-project" class="hero-pm__body hero-pm__body-3">
+            <!-- <div id="federal-project" class="hero-pm__body hero-pm__body-3 sr-only">
                <h2>Federal II Tower</h2>
                <p class="desc">
                   A sequel theme project for a tower originally built in the
@@ -82,7 +82,7 @@
                </p>
                <a href="./portfolio.html">See Our Portfolio</a>
             </div> -->
-            <!-- <div id="trinity-project" class="hero-pm__body hero-pm__body-4">
+            <!-- <div id="trinity-project" class="hero-pm__body hero-pm__body-4 sr-only">
                <h2>Trinity Bank Tower</h2>
                <p class="desc">
                   Trinity Bank challenged us to make a concept for a 84 story
@@ -96,20 +96,21 @@
                <button aria-controls="paramour-project" aria-selected="true">
                   <span aria-hidden="true">01</span>
                </button>
-
+               <!-- / paramour-project -->
                <button aria-controls="seraph-project" aria-selected="false">
                   <span aria-hidden="true">02</span>
                </button>
-
+               <!-- / seraph-project -->
                <button aria-controls="federal-project" aria-selected="false">
                   <span aria-hidden="true">03</span>
                </button>
-
+               <!-- / federal-project  -->
                <button aria-controls="trinity-project" aria-selected="false">
                   <span aria-hidden="true">04</span>
                </button>
+               <!-- / trinity-project  -->
             </div>
-            <!-- data visible attr - dynamically change bg img -->
+            <!-- dynamically change bg img - data visible attr -->
             <!-- sr-only img descs + for dynamic hidden content vs display: none; -->
          </article>
          <!-- / hero-pm -->
