@@ -2,18 +2,19 @@ const tabList = document.querySelector('[role="tablist"]')
 const tabs = [...document.querySelectorAll('[role="tab"]')]
 
 let tabsFocus = 0
-
-tabList.addEventListener('keydown', (e) => {
-   const event = e as KeyboardEvent
+function changeTabFocus(e: Event) {
+   const key = (e as KeyboardEvent).key
    const targetBtn = tabs[tabsFocus] as HTMLElement
    const keyRight = 'ArrowRight'
    const keyLeft = 'ArrowLeft'
 
-   if (event.key === keyRight || event.key === keyLeft)
+   if (key === keyRight || key === keyLeft)
       tabs[tabsFocus].setAttribute('tabindex', '-1')
-   if (event.key === keyRight && tabsFocus < tabs.length - 1) tabsFocus++
-   if (event.key === keyLeft && tabsFocus > 0) tabsFocus--
+   if (key === keyRight && tabsFocus < tabs.length - 1) tabsFocus++
+   if (key === keyLeft && tabsFocus > 0) tabsFocus--
 
    tabs[tabsFocus].setAttribute('tabindex', '0')
    targetBtn.focus()
-})
+}
+
+tabList.addEventListener('keydown', changeTabFocus)
