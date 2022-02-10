@@ -22,8 +22,10 @@ function handleTabClick(e: Event) {
    const hiddenContent = target
       .closest('[role="tab"]')
       .getAttribute('aria-controls')
+   const hiddenImg = target.closest('[role="tab"]').getAttribute('data-image')
    const hiddenContentBody = document.getElementById(hiddenContent)
-   // const hiddenContentImage = document.getElementById(hiddenContent)
+   const hiddenContentImage = document.getElementById(hiddenImg)
+
    document
       .querySelectorAll('[role="tabpanel"]')
       .forEach((panel) => panel.setAttribute('hidden', '')) // true
