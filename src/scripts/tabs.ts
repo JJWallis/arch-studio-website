@@ -4,7 +4,7 @@ let tabsFocus = 0
 
 function changeTabFocus(e: Event) {
    const key = (e as KeyboardEvent).key
-   const targetBtn = tabs[tabsFocus] as HTMLElement
+   const targetBtn = tabs[tabsFocus] as HTMLButtonElement
    const keyRight = 'ArrowRight'
    const keyLeft = 'ArrowLeft'
 
@@ -19,12 +19,19 @@ function changeTabFocus(e: Event) {
 
 function handleTabClick(e: Event) {
    const target = e.target as HTMLElement
+   const parent = target.parentElement
    const hiddenContent = target
       .closest('[role="tab"]')
       .getAttribute('aria-controls')
    const hiddenImg = target.closest('[role="tab"]').getAttribute('data-image')
    const hiddenContentBody = document.getElementById(hiddenContent)
    const hiddenContentImage = document.getElementById(hiddenImg)
+
+   // parent
+   //    .querySelector('[aria-selected="true"]')
+   //    .setAttribute('aria-selected', 'false')
+
+   // target.setAttribute('aria-selected', 'true')
 
    document
       .querySelectorAll('[role="tabpanel"]')
