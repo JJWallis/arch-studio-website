@@ -29,13 +29,13 @@ function handleTabClick(e: Event) {
    document
       .querySelectorAll('[role="tabpanel"]')
       .forEach((panel) => panel.setAttribute('hidden', '')) // true
-   hiddenContentBody.removeAttribute('hidden')
 
    document
       .querySelectorAll('picture')
       .forEach((pic) => pic.setAttribute('data-visible', 'false'))
 
-   // document.querySelector([`#${hiddenContentImage}`]).removeAttribute('hidden')
+   hiddenContentBody.removeAttribute('hidden')
+   hiddenContentImage.removeAttribute('data-visible')
 }
 
 tabList.addEventListener('keydown', changeTabFocus)
