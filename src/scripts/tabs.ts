@@ -23,6 +23,7 @@ function handleTabClick(e: Event) {
       .closest('[role="tab"]')
       .getAttribute('aria-controls')
    const hiddenContentBody = document.getElementById(hiddenContent)
+   // const hiddenContentImage = document.getElementById(hiddenContent)
    document
       .querySelectorAll('[role="tabpanel"]')
       .forEach((panel) => panel.setAttribute('hidden', '')) // true
@@ -31,6 +32,8 @@ function handleTabClick(e: Event) {
    document
       .querySelectorAll('picture')
       .forEach((pic) => pic.setAttribute('data-visible', 'false'))
+
+   // document.querySelector([`#${hiddenContentImage}`]).removeAttribute('hidden')
 }
 
 tabList.addEventListener('keydown', changeTabFocus)
