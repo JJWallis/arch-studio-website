@@ -3,5 +3,8 @@
 .header {
    @include m(pm) {
       outline: 1px solid black;
+      @include mq(max-width, tablet) {
+         position: relative;
+      }
    }
 }
