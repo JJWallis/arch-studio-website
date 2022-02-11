@@ -3,9 +3,10 @@
 .nav {
    @include m(pm) {
       @include mq(max-width, tablet) {
-          @include position(absolute) {
-              inset: 0;
-          };
+         @include position(absolute) {
+            top: 0;
+            right: 0;
+         }
       }
    }
 }
