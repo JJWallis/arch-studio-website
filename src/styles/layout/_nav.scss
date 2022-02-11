@@ -1,1 +1,11 @@
 @use '../abstracts/' as *;
+
+.nav {
+   @include m(pm) {
+      @include mq(max-width, tablet) {
+          @include position(absolute) {
+              inset: 0;
+          };
+      }
+   }
+}
