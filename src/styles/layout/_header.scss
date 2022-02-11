@@ -1,1 +1,7 @@
 @use '../abstracts/' as *;
+
+.header {
+   @include m(pm) {
+      outline: 1px solid black;
+   }
+}
