@@ -3,8 +3,16 @@
 .header {
    @include m(pm) {
       outline: 1px solid black;
+      padding-block: 1rem;
+
       @include mq(max-width, tablet) {
          position: relative;
+      }
+
+      @include e(body) {
+         @include mq(max-width, tablet) {
+            @include flexy($just: space-between, $align: center);
+         }
       }
    }
 }
