@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+
+picture {
+   display: block;
+
+   &[data-visible='false'] {
+      display: none;
+   }
+}
+
+[role='tab']:focus {
+   outline: 1px solid red;
+}
