@@ -3,7 +3,7 @@
 .header {
    @include m(pm) {
       outline: 1px solid black;
-      padding-block: 1rem;
+      padding-block: 1.5rem;
 
       @include mq(max-width, tablet) {
          position: relative;
