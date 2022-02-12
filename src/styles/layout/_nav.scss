@@ -3,9 +3,10 @@
 .nav {
    @include m(pm) {
       @include mq(max-width, tablet) {
-         @include position(absolute, $width: 420px) {
+         @include position(absolute) {
             top: 100%;
             right: 0;
+            left: 5%;
          }
          padding-block: 2rem;
          background-color: hsl(var(--clr-light-grey));
