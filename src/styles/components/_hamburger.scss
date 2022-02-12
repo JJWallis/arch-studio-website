@@ -1,1 +1,7 @@
 @use '../abstracts/' as *;
+
+.hamburger {
+   @include mq(min-width, tablet) {
+      display: none;
+   }
+}
