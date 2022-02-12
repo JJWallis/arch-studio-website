@@ -3,11 +3,11 @@
 .nav {
    @include m(pm) {
       @include mq(max-width, tablet) {
-         @include position(absolute, $width: 430px) {
+         @include position(absolute, $width: 420px) {
             top: 100%;
             right: 0;
          }
-         padding-block: 1rem;
+         padding-block: 2rem;
          background-color: hsl(var(--clr-light-grey));
       }
    }
@@ -15,9 +15,8 @@
    @include e(list) {
       @include mq(max-width, tablet) {
          & a {
-            // outline: 1px solid black;
             display: block;
-            padding: 1rem 1rem;
+            padding: 1rem 3rem;
          }
       }
 
