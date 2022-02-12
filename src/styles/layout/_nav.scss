@@ -10,8 +10,12 @@
             left: 5%;
          }
          background-color: hsl(var(--clr-light-grey));
-         // transform: rotate3d(0, 1, 0, 90deg);
+         transform: rotateX(90deg);
          transition: transform 0.3s ease-in-out;
+
+         &[data-visible='true'] {
+            transform: rotate(0);
+         }
       }
    }
 
