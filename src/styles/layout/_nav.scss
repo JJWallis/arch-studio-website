@@ -7,15 +7,18 @@
             top: 100%;
             right: 0;
          }
+         padding-block: 1rem;
          background-color: hsl(var(--clr-light-grey));
       }
    }
 
    @include e(list) {
-      & a {
-         // outline: 1px solid black;
-         display: block;
-         padding-block: 1rem;
+      @include mq(max-width, tablet) {
+         & a {
+            // outline: 1px solid black;
+            display: block;
+            padding: 1rem 1rem;
+         }
       }
 
       @include mq(min-width, tablet) {
