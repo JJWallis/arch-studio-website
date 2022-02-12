@@ -3,15 +3,21 @@
 .nav {
    @include m(pm) {
       @include mq(max-width, tablet) {
-         background-color: hsl(var(--clr-light-grey));
          @include position(absolute, $width: 430px) {
             top: 100%;
             right: 0;
          }
+         background-color: hsl(var(--clr-light-grey));
       }
    }
 
    @include e(list) {
+      & a {
+         // outline: 1px solid black;
+         display: block;
+         padding-block: 1rem;
+      }
+
       @include mq(min-width, tablet) {
          @include flexy($just: center, $align: center);
       }
