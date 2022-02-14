@@ -15,14 +15,13 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // review solution - better approach?, can go back if run into issue
 
-function transposeMatrix(input: number[][]) {
-   return input.map((_, idx) => input.map((row) => row[idx]))
+// Input: nums = [0,0,1,1,1,2,2,3,3,4]
+// Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+// Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively
+// It does not matter what you leave beyond the returned k (hence they are underscores)
+
+function removeDuplicates(nums: number[]): number {
+   return 0
 }
 
-console.log(
-   transposeMatrix([
-      [1, 2, 3],
-      [1, 2, 3],
-      [1, 2, 3],
-   ])
-)
+console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))
