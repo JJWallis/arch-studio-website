@@ -16,14 +16,10 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach?, can go back if run into issue
 // wwwiiuu = 3w2i2u | 3w2i2u = wwwiiuu
 
-function removeDuplicates(input: number[]) {
+function mapMimic(input: number[]) {
    return input.reduce((acc, curr) => {
-      return acc.includes(curr) ? acc : [...acc, curr]
+      return [...acc, curr + 1]
    }, [])
 }
 
-console.log(
-   removeDuplicates([
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-   ])
-)
+console.log(mapMimic([1, 2, 3]))
