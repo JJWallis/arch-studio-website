@@ -17,8 +17,7 @@ hamburger.addEventListener('click', () => {
 // wwwiiuu = 3w2i2u | 3w2i2u = wwwiiuu
 
 function encode(input: string) {
-   console.log(input.match(/^w+/g))
-   return input.replace(/^w+/g, (match) => match.length + match[0])
+   return input.replace(/(\w)\1+/g, (match) => match.length + match[0])
 }
 
 console.log(encode('wwwiiuu'))
