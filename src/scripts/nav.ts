@@ -16,8 +16,14 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach?, can go back if run into issue
 // wwwiiuu = 3w2i2u | 3w2i2u = wwwiiuu
 
-function encode(input: string) {
-   return input.replace(/(\w)\1+/g, (match) => match.length + match[0])
+function decode(input: string) {
+   // return input.replace(/(\d+)(\w)/g, (match) =>
+   //    match[1].repeat(Number(match[0]))
+   // )
+   return input.replace(/(\d+)(\w)/g, (x, y, z) => {
+      console.log(x, y, z)
+      return null
+   })
 }
 
-console.log(encode('wwwiiuu'))
+console.log(decode('32w2i2u'))
