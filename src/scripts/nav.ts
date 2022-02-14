@@ -16,10 +16,12 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach?, can go back if run into issue
 // wwwiiuu = 3w2i2u | 3w2i2u = wwwiiuu
 
-function mapMimic(input: number[]) {
-   return input.reduce((acc, curr) => {
-      return [...acc, curr + 1]
-   }, [])
+function flattenArr(input: (string | string[])[]) {
+   return input.reduce(
+      (acc, curr) =>
+         Array.isArray(curr) ? [...acc, ...flattenArr(curr)] : [...acc, curr],
+      []
+   )
 }
 
-console.log(mapMimic([1, 2, 3]))
+console.log(flattenArr(['a', 'b', ['c', 'd', 'e'], ['f', 'g']]))
