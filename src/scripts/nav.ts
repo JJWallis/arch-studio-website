@@ -14,14 +14,15 @@ hamburger.addEventListener('click', () => {
 // devise a plan - take lager issue + break down into smaller
 // execute plan - from outline of plan via comments
 // review solution - better approach?, can go back if run into issue
-// wwwiiuu = 3w2i2u | 3w2i2u = wwwiiuu
 
-function flattenArr(input: (string | string[])[]) {
-   return input.reduce(
-      (acc, curr) =>
-         Array.isArray(curr) ? [...acc, ...flattenArr(curr)] : [...acc, curr],
-      []
-   )
+function transposeMatrix(input: number[][]) {
+   return input.map((_, idx) => input.map((row) => row[idx]))
 }
 
-console.log(flattenArr(['a', 'b', ['c', 'd', 'e'], ['f', 'g']]))
+console.log(
+   transposeMatrix([
+      [1, 2, 3],
+      [1, 2, 3],
+      [1, 2, 3],
+   ])
+)
