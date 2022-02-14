@@ -15,3 +15,10 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // review solution - better approach?, can go back if run into issue
 // wwwiiuu = 3w2i2u | 3w2i2u = wwwiiuu
+
+function encode(input: string) {
+   console.log(input.match(/^w+/g))
+   return input.replace(/^w+/g, (match) => match.length + match[0])
+}
+
+console.log(encode('wwwiiuu'))
