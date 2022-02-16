@@ -21,21 +21,17 @@ hamburger.addEventListener('click', () => {
 // It does not matter what you leave beyond the returned k (hence they are underscores)
 
 function removeDuplicates(nums: (number | string)[]) {
-   const originalLength = nums.length // 10 length
-   let duplicateLength: number
-
    nums.sort()
-   nums.forEach((num, idx, arr) =>
-      num === arr[idx + 1] || num === arr[idx - 1] ? arr.splice(idx, 1) : num
-   ) // 5 length
 
-   duplicateLength = originalLength - nums.length
-
-   for (let i = 0; i < duplicateLength; i++) {
-      nums.push('_')
+   let i = 1
+   for (let j = 0; j < nums.length; j++) {
+      if (nums[j] !== nums[i]) {
+         nums[j] = nums[i]
+      }
+      nums.splice(nums.find((num) => num === nums[i]) as number, 1)
+      i++
+      console.log(nums)
    }
-
-   console.log(nums, nums.length)
 }
 
 console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))
