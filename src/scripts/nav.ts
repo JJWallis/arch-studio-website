@@ -21,13 +21,14 @@ hamburger.addEventListener('click', () => {
 // It does not matter what you leave beyond the returned k (hence they are underscores)
 
 function removeDuplicates(nums: (number | string)[]) {
+   if (nums.length === 0) return 0
    nums.sort()
 
    let i = 0
    for (let j = 1; j < nums.length; j++) {
       if (nums[j] !== nums[i]) {
-         nums[i] = nums[j]
          i++
+         nums[i] = nums[j]
          console.log('running')
       }
    }
