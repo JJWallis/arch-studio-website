@@ -15,15 +15,3 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // execute plan - from outline of plan via comments
 // review solution - better approach?, can go back if run into issue
-
-function getConcatenation(nums: number[]): number[] {
-   const concatArr = []
-   const length = nums.length
-   for (let i = 0; i < length; i++) {
-      concatArr[i] = nums[i]
-      concatArr[i + length] = nums[i]
-   }
-   return concatArr
-}
-
-console.log(getConcatenation([1, 2, 3, 4, 5]))
