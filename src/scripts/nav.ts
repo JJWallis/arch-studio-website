@@ -23,15 +23,15 @@ hamburger.addEventListener('click', () => {
 function removeDuplicates(nums: (number | string)[]) {
    nums.sort()
 
-   let i = 1
-   for (let j = 0; j < nums.length; j++) {
+   let i = 0
+   for (let j = 1; j < nums.length; j++) {
       if (nums[j] !== nums[i]) {
-         nums[j] = nums[i]
+         nums[i] = nums[j]
+         i++
+         console.log('running')
       }
-      nums.splice(nums.find((num) => num === nums[i]) as number, 1)
-      i++
-      console.log(nums)
    }
+   return i + 1
 }
 
 console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))
