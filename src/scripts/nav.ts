@@ -15,3 +15,14 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // execute plan - from outline of plan via comments
 // review solution - better approach?, can go back if run into issue
+
+// Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i])
+// Return the running sum of nums
+// nput: nums = [1,2,3,4]
+// Output: [1,3,6,10]
+
+function runningSum(nums: number[]) {
+   return nums.reduce((acc, curr) => null, [])
+}
+
+console.log(runningSum([1, 2, 3, 4]))
