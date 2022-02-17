@@ -16,16 +16,12 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
 
-// Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0] + nums[i])
-// Return the running sum of nums
-// nput: nums = [1,2,3,4]
-// Output: [1,3,6,10]
+// You are given an m x n integer grid accounts where accounts[i][j]
+// is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank
+// Return the wealth that the richest customer has
+// A customer's wealth is the amount of money they have in all their bank accounts.
+// The richest customer is the customer that has the maximum wealth
 
-function runningSum(nums: number[]) {
-   return nums.reduce(
-      (acc, curr, idx) => [...acc, !idx ? curr : acc[idx - 1] + curr],
-      []
-   )
+function maximumWealth(accounts: number[][]): number {
+   return 0
 }
-
-console.log(runningSum([1, 2, 3, 4]))
