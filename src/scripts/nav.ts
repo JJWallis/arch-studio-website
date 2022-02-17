@@ -12,17 +12,20 @@ hamburger.addEventListener('click', () => {
 // OOP Style
 // Understand problem (repeat it with diff words)
 // devise a plan - take lager issue + break down into smaller
-// what do I currently know
 // execute plan - from outline of plan via comments
+// what do I currently know
 // review solution - better approach?, can go back if run into issue
 
-// Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i])
+// Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0] + nums[i])
 // Return the running sum of nums
 // nput: nums = [1,2,3,4]
 // Output: [1,3,6,10]
 
 function runningSum(nums: number[]) {
-   return nums.reduce((acc, curr) => null, [])
+   return nums.reduce(
+      (acc, curr, idx) => [...acc, !idx ? curr : acc[idx - 1] + curr],
+      []
+   )
 }
 
 console.log(runningSum([1, 2, 3, 4]))
