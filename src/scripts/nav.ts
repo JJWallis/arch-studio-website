@@ -16,21 +16,18 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
 
-// You are given an m x n integer grid accounts where accounts[i][j]
-// is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank
-// Return the wealth that the richest customer has
-// A customer's wealth is the amount of money they have in all their bank accounts.
-// The richest customer is the customer that has the maximum wealth
+// There is a programming language with only four operations and one variable X:
+//  ++X and X++ increments the value of the variable X by 1.
+//  --X and X-- decrements the value of the variable X by 1.
+// Initially, the value of X is 0.
+// Given an array of strings operations containing a list of operations,
+// return the final value of X after performing all the operations.
 
-function maximumWealth(accounts: number[][]): number {
-   return Math.max(
-      ...accounts.map((account) => account.reduce((a, b) => a + b, 0))
+function finalValueAfterOperations(operations: string[]) {
+   return operations.reduce(
+      (acc, curr) => (curr.includes('--') ? acc - 1 : acc + 1),
+      0
    )
 }
 
-console.log(
-   maximumWealth([
-      [1, 2, 3],
-      [3, 2, 1],
-   ])
-)
+console.log(finalValueAfterOperations(['--X', 'X++', 'X++']))
