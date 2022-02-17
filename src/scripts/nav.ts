@@ -23,5 +23,15 @@ hamburger.addEventListener('click', () => {
 // The richest customer is the customer that has the maximum wealth
 
 function maximumWealth(accounts: number[][]): number {
-   return 0
+   const [customer1, customer2] = accounts
+   const wealth1 = customer1.reduce((acc, curr) => acc + curr, 0)
+   const wealth2 = customer2.reduce((acc, curr) => acc + curr, 0)
+   return Math.max(wealth1, wealth2)
 }
+
+console.log(
+   maximumWealth([
+      [1, 2, 3],
+      [3, 2, 1],
+   ])
+)
