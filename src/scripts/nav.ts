@@ -15,3 +15,11 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
+
+// A sentence is a list of words that are separated by a single space with no leading or trailing spaces.
+// You are given an array of strings sentences, where each sentences[i] represents a single sentence.
+// Return the maximum number of words that appear in a single sentence.
+
+function mostWordsFound(sentences: string[]): number {
+   return 0
+}
