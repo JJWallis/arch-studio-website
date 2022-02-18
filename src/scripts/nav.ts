@@ -22,7 +22,13 @@ hamburger.addEventListener('click', () => {
 // Output: [2,3,5,4,1,7]
 
 function shuffle(nums: number[], n: number) {
-   // n - 1 for index
+   const results = []
+   let i = n
+   for (let j = 0; j < n - 1; j++) {
+      results[j] = nums[j]
+      results[j + 1] = nums[j + n]
+      i + 1
+   }
 }
 
 console.log(shuffle([2, 5, 1, 3, 4, 7], 3))
