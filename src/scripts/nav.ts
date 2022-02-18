@@ -24,7 +24,9 @@ hamburger.addEventListener('click', () => {
 // Note that multiple kids can have the greatest number of candies.
 
 function kidsWithCandies(candies: number[], extraCandies: number): boolean[] {
-   return []
+   return candies.map((kid) =>
+      kid + extraCandies >= Math.max(...candies) ? true : false
+   )
 }
 
 console.log(kidsWithCandies([2, 3, 5, 1, 3], 3)) // [true,true,true,false,true]
