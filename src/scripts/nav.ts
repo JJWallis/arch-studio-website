@@ -23,6 +23,12 @@ hamburger.addEventListener('click', () => {
 // Output: 6
 
 function mostWordsFound(sentences: string[]) {
+   if (
+      sentences.length === 0 ||
+      !sentences.every((sentence) => sentence.includes(' '))
+   )
+      return 0
+   sentences.forEach((sentence) => sentence.toLowerCase())
    return Math.max(...sentences.map((sentence) => sentence.split(' ').length))
 }
 
