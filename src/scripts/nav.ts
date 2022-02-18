@@ -22,14 +22,14 @@ hamburger.addEventListener('click', () => {
 // Input: sentences = ["alice and bob love leetcode", "i think so too", "this is great thanks very much"]
 // Output: 6
 
-function mostWordsFound(sentences: string[]): number {
-   return 0
+function mostWordsFound(sentences: string[]) {
+   return Math.max(...sentences.map((sentence) => sentence.split(' ').length))
 }
 
 console.log(
    mostWordsFound([
-      'alice and bob love leetcode',
+      'alice and bob love leetcode hey there',
       'i think so too',
       'this is great thanks very much',
    ])
-) // 6
+)
