@@ -20,3 +20,9 @@ hamburger.addEventListener('click', () => {
 // Return the array in the form [x1,y1,x2,y2,...,xn,yn].
 // Input: nums = [2,5,1,3,4,7], n = 3
 // Output: [2,3,5,4,1,7]
+
+function shuffle(nums: number[], n: number) {
+   // n - 1 for index
+}
+
+console.log(shuffle([2, 5, 1, 3, 4, 7], 3))
