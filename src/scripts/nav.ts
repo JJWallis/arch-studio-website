@@ -26,7 +26,7 @@ function shuffle(nums: number[], n: number) {
 
    let i = n
    for (let j = 0; j < n; j++) {
-      results[j] = nums[j]
+      results.push(nums[j])
       results.push(nums[i])
       i++
    }
