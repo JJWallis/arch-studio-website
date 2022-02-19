@@ -22,14 +22,16 @@ hamburger.addEventListener('click', () => {
 // Return the original array arr. It can be proved that the answer exists and is unique
 
 function decode(encoded: number[], first: number): number[] {
+   let diff: number
    return encoded.reduce((acc, num, idx) => {
-      let diff: number
       if (!idx) {
          acc.push(first)
          diff = num - first
+      } else {
+         diff = Math.abs(num - diff)
       }
       return [...acc, diff]
    }, [])
 }
 
-console.log(decode([6, 2, 7, 3], 4)) // [4, 2, 0, 7, 4]
+console.log(decode([6, 2, 7, 3], 4))
