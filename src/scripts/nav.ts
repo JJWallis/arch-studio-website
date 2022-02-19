@@ -15,3 +15,14 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
+
+// There is a hidden integer array arr that consists of n non-negative integers
+// It was encoded into another integer array encoded of length n - 1, such that encoded[i] = arr[i] XOR arr[i + 1]
+// You are given the encoded array. You are also given an integer first, that is the first element of arr, i.e. arr[0]
+// Return the original array arr. It can be proved that the answer exists and is unique
+// Input: encoded = [6,2,7,3], first = 4
+// Output: [4,2,0,7,4]
+
+function decode(encoded: number[], first: number): number[] {
+   return []
+}
