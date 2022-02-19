@@ -21,7 +21,9 @@ hamburger.addEventListener('click', () => {
 // Return the shuffled string
 
 function restoreString(s: string, indices: number[]): string {
-   return indices.map((num) => s[num]).join('')
+   const results = Array(s.length) as string[]
+   indices.forEach((num, idx) => (results[num] = s[idx]))
+   return results.join('')
 }
 
-console.log(restoreString('codeleet', [4, 5, 6, 7, 0, 2, 1, 3])) // 'leetcode'
+console.log(restoreString('codeleet', [4, 5, 6, 7, 0, 2, 1, 3]))
