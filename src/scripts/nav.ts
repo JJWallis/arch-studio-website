@@ -16,14 +16,15 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
 
-// You are given a string s and an integer array indices of the same length
-// The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string
-// Return the shuffled string
+// Given two arrays of integers nums and index. Your task is to create target array under the following rules:
+// Initially target array is empty.
+// From left to right read nums[i] and index[i], insert at index index[i] the value nums[i] in target array.
+// Repeat the previous step until there are no elements to read in nums and index.
+// Return the target array.
 
-function restoreString(s: string, indices: number[]): string {
-   const results = Array(s.length) as string[]
-   indices.forEach((num, idx) => (results[num] = s[idx]))
-   return results.join('')
+function createTargetArray(nums: number[], index: number[]): number[] {
+   const target = []
+   return target
 }
 
-console.log(restoreString('codeleet', [4, 5, 6, 7, 0, 2, 1, 3]))
+console.log(createTargetArray([0, 1, 2, 3, 4], [0, 1, 2, 2, 1])) // [0,4,1,3,2]
