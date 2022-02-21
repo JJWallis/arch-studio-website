@@ -15,17 +15,3 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
-
-// Given two arrays of integers nums and index. Your task is to create target array under the following rules:
-// Initially target array is empty
-// From left to right read nums[i] and index[i], insert at index index[i] the value nums[i] in target array
-// Repeat the previous step until there are no elements to read in nums and index
-// Return the target array
-
-function createTargetArray(nums: number[], index: number[]) {
-   const target = []
-   index.forEach((num, idx) => target.splice(num, 0, nums[idx]))
-   return target
-}
-
-console.log(createTargetArray([0, 1, 2], [0, 3, 2])) // [0, 1, 2]
