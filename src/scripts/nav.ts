@@ -31,3 +31,15 @@ function countMatches(
 ): number {
    return 0
 }
+
+console.log(
+   countMatches(
+      [
+         ['shoe', 'black', 'nike'],
+         ['shoe', 'black', 'adidas'],
+         ['dress', 'red', 'linde'],
+      ],
+      'color',
+      'black'
+   )
+)
