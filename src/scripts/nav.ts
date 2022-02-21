@@ -24,7 +24,8 @@ hamburger.addEventListener('click', () => {
 
 function createTargetArray(nums: number[], index: number[]) {
    const target = []
+   index.forEach((num, idx) => target.splice(num, 0, nums[idx]))
    return target
 }
 
-console.log(createTargetArray([0, 1, 2, 3, 4], [0, 1, 2, 2, 1])) // [0,4,1,3,2]
+console.log(createTargetArray([0, 1, 2], [0, 3, 2])) // [0, 1, 2]
