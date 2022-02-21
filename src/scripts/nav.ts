@@ -29,7 +29,14 @@ function countMatches(
    ruleKey: string,
    ruleValue: string
 ): number {
-   return 0
+   if (!items.length) return
+   if (ruleKey === 'type' || ruleKey === 'color' || ruleKey === 'name') {
+      const idx = ruleKey === 'type' ? 0 : ruleKey === 'color' ? 1 : 2
+      return items.reduce(
+         (acc, curr) => (curr[idx] === ruleValue ? acc + 1 : acc),
+         0
+      )
+   }
 }
 
 console.log(
@@ -37,7 +44,7 @@ console.log(
       [
          ['shoe', 'black', 'nike'],
          ['shoe', 'black', 'adidas'],
-         ['dress', 'red', 'linde'],
+         ['dress', 'black', 'linde'],
       ],
       'color',
       'black'
