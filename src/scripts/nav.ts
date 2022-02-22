@@ -15,3 +15,13 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
+
+// Given an integer array nums and an integer k,
+// return the number of pairs (i, j) where i < j such that |nums[i] - nums[j]| == k.
+// Input: nums = [1,2,2,1], k = 1
+// Output: 4
+// Explanation: The pairs with an absolute difference of 1 are:
+// - [1,2,2,1]
+// - [1,2,2,1]
+// - [1,2,2,1]
+// - [1,2,2,1]
