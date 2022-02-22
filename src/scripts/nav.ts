@@ -20,12 +20,15 @@ hamburger.addEventListener('click', () => {
 // return the number of pairs (i, j) where i < j such that |nums[i] - nums[j]| == k
 
 function countKDifference(nums: number[], k: number) {
-   return nums.map((numOuter, idxOuter) =>
-      nums.map(
-         (numInner, idxInner) =>
-            idxOuter !== idxInner && numOuter - numInner === k
+   const results = []
+   nums.forEach((numOuter, idxOuter) =>
+      nums.forEach((numInner, idxInner) =>
+         idxOuter !== idxInner && numOuter - numInner === k
+            ? results.push(1)
+            : null
       )
    )
+   return results.length
 }
 
 console.log(countKDifference([1, 2, 2, 1], 1)) // 4
