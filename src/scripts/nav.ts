@@ -18,12 +18,14 @@ hamburger.addEventListener('click', () => {
 
 // Given an integer array nums and an integer k,
 // return the number of pairs (i, j) where i < j such that |nums[i] - nums[j]| == k
-// The pairs with an absolute difference of 1 are:
-// - [1,2,2,1]
-// - [1,2,2,1]
-// - [1,2,2,1]
-// - [1,2,2,1]
 
-function countKDifference(nums: number[], k: number): number {}
+function countKDifference(nums: number[], k: number) {
+   return nums.map((numOuter, idxOuter) =>
+      nums.map(
+         (numInner, idxInner) =>
+            idxOuter !== idxInner && numOuter - numInner === k
+      )
+   )
+}
 
 console.log(countKDifference([1, 2, 2, 1], 1)) // 4
