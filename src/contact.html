@@ -82,7 +82,12 @@
                      <legend class="sr-only">Contact form</legend>
                      <div>
                         <label for="input-name" class="sr-only">Name</label>
-                        <input id="input-name" type="text" placeholder="Name" />
+                        <input
+                           id="input-name"
+                           type="text"
+                           placeholder="Name"
+                           name="name"
+                        />
                      </div>
                      <div>
                         <label for="input-email" class="sr-only">Email</label>
@@ -90,9 +95,25 @@
                            id="input-email"
                            type="email"
                            placeholder="Email"
+                           name="email"
                         />
                      </div>
+                     <div>
+                        <label for="input-message" class="sr-only"
+                           >Message</label
+                        >
+                        <textarea
+                           id="input-message"
+                           name="message"
+                           placeholder="Message"
+                           maxlength="1000"
+                           minlength="5"
+                        ></textarea>
+                     </div>
                   </fieldset>
+                  <button id="submit-btn" type="submit">
+                     <span class="sr-only">Submit form</span>
+                  </button>
                </form>
             </div>
          </section>
@@ -100,9 +121,5 @@
       <!-- / main -->
 
       <footer class="footer--pm"></footer>
-      Contact Details Main Office Mail: archone@mail.com Address: 1892 Chenoweth
-      Drive TN Phone: 123-456-3451 View on Map Office II Mail: archtwo@mail.com
-      Address: 3399 Wines Lane TX Phone: 832-123-4321 View on Map Connect with
-      us Name Email Message Portfolio About Us Contact See Our Portfolio
    </body>
 </html>
