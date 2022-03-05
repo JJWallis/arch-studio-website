@@ -22,11 +22,11 @@
       <!-- / header -->
 
       <main id="main-content" class="main">
-         <article class="overlap hero--contact grid-ct">
-            <picture class="overlap__img">
+         <article class="overlap hero--contact grid-ct" role="grid">
+            <picture class="overlap__img" role="gridcell">
                <img src="" alt="" />
             </picture>
-            <div class="overlap__body ct-wrapper">
+            <div class="overlap__body ct-wrapper" role="gridcell">
                <h1>Your team of professionals</h1>
                <p class="desc">
                   Our small team of world-class professionals will work with you
@@ -69,11 +69,16 @@
 
          <section
             aria-labelledby="leaders-title"
-            class="grid-ct ct-wrapper"
-            role="grid"
+            class="leaders grid-ct ct-wrapper"
          >
-            <div>
+            <div class="leaders__title">
                <h2 id="leaders-title">The Leaders</h2>
+            </div>
+            <div class="leaders__body" role="grid">
+               <div role="gridcell"></div>
+               <div role="gridcell"></div>
+               <div role="gridcell"></div>
+               <div role="gridcell"></div>
             </div>
          </section>
          <!-- / leaders -->
