@@ -23,7 +23,7 @@ hamburger.addEventListener('click', () => {
 // The second character of the ith pair denotes the rod that the ith ring is placed on ('0' to '9').
 // Return the number of rods that have all three colors of rings on them.
 
-function countPoints(rings: string): number {
+function countPoints(rings: string) {
    if (!rings.length) return 0
    const pairs = rings.match(/[rgb]\d/gi)
    const duplicatesRemoved = [...new Set(pairs)].join('')
@@ -32,13 +32,13 @@ function countPoints(rings: string): number {
    console.log(match)
    // reduce over returned regex matched array or length
 
-   return match.map((valOuter, idxOuter) =>
-      match.filter((valInner, idxInner) => {
-         if (idxOuter !== idxInner) {
-            valInner === valOuter
-         }
+   return match.map((valOuter) => {
+      let count = 0
+      match.map((valInner) => {
+         if (valOuter === valInner) count++
+         if (count === 3) return valOuter
       })
-   ).length
+   })
 }
 
 console.log(countPoints('B0B0B0B6G0R6R0R6G9')) // 1
