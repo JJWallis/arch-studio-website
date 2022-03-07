@@ -21,12 +21,13 @@ hamburger.addEventListener('click', () => {
 // Every two characters in rings forms a color-position pair that is used to describe each ring where:
 // The first character of the ith pair denotes the ith ring's color ('R', 'G', 'B').
 // The second character of the ith pair denotes the rod that the ith ring is placed on ('0' to '9').
-// For example, "R3G2B1" describes n == 3 rings:
-// a red ring placed onto the rod labeled 3, a green ring placed onto the rod labeled 2, and a blue ring placed onto the rod labeled 1.
 // Return the number of rods that have all three colors of rings on them.
 
 function countPoints(rings: string): number {
-   // str iterable - loop over + replace() method + regex to match patterns desired
+   if (!rings.length) return 0
+   const match = rings.match(/(?<=[rgb])\d/gi)
+   console.log(match)
+   // str iterable - loop over + match() method + regex to match patterns desired
    // reduce over returned regex matched array or length
    return 0
 }
