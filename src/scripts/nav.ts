@@ -25,11 +25,11 @@ hamburger.addEventListener('click', () => {
 
 function countPoints(rings: string): number {
    if (!rings.length) return 0
-   const match = rings.match(/(?<=[rgb])\d/gi)
-   console.log(match)
-   // str iterable - loop over + match() method + regex to match patterns desired
+   const removeDuplicates = rings.match(/[RGB]\d/gi)
+   // const match = rings.match(/(?<=[rgb])\d/gi)
+   // console.log(match)
    // reduce over returned regex matched array or length
    return 0
 }
 
-console.log(countPoints('B0B6G0R6R0R6G9')) // 1
+console.log(countPoints('B0B0B0B6G0R6R0R6G9')) // 1
