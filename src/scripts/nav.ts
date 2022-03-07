@@ -25,11 +25,20 @@ hamburger.addEventListener('click', () => {
 
 function countPoints(rings: string): number {
    if (!rings.length) return 0
-   const removeDuplicates = rings.match(/[RGB]\d/gi)
-   // const match = rings.match(/(?<=[rgb])\d/gi)
-   // console.log(match)
+   const pairs = rings.match(/[rgb]\d/gi)
+   const duplicatesRemoved = [...new Set(pairs)].join('')
+   // console.log(duplicatesRemoved)
+   const match = duplicatesRemoved.match(/(?<=[rgb])\d/gi)
+   console.log(match)
    // reduce over returned regex matched array or length
-   return 0
+
+   return match.map((valOuter, idxOuter) =>
+      match.filter((valInner, idxInner) => {
+         if (idxOuter !== idxInner) {
+            valInner === valOuter
+         }
+      })
+   ).length
 }
 
 console.log(countPoints('B0B0B0B6G0R6R0R6G9')) // 1
