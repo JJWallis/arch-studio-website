@@ -26,7 +26,9 @@ hamburger.addEventListener('click', () => {
 // Return the number of rods that have all three colors of rings on them.
 
 function countPoints(rings: string): number {
+   // str iterable - loop over + replace() method + regex to match patterns desired
+   // reduce over returned regex matched array or length
    return 0
 }
 
-console.log(countPoints('R3G2B1'))
+console.log(countPoints('B0B6G0R6R0R6G9')) // 1
