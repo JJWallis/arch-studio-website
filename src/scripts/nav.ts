@@ -32,13 +32,10 @@ function countPoints(rings: string) {
    console.log(match)
    // reduce over returned regex matched array or length
 
-   return match.map((valOuter) => {
-      let count = 0
-      match.map((valInner) => {
-         if (valOuter === valInner) count++
-         if (count === 3) return valOuter
-      })
-   })
+   return match
+      .sort()
+      .join('')
+      .match(/(.)\1{2,}/g).length
 }
 
 console.log(countPoints('B0B0B0B6G0R6R0R6G9')) // 1
