@@ -17,11 +17,11 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach?, can go back if run into issue
 
 function maxDepth(s: string): number {
-   const split = s.split('\n')
+   const split = s.split('+')
    console.log(split)
    // split str at '('
    // reduce over S =
    return 0
 }
 
-console.log(maxDepth('(1)+((2))+(((3)))')) // 3
+console.log(maxDepth('(1+(2*3)+((8)/4))+1')) // 3
