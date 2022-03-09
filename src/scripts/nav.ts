@@ -15,6 +15,13 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
+
 function maxDepth(s: string): number {
+   const split = s.split('\n')
+   console.log(split)
+   // split str at '('
+   // reduce over S =
    return 0
 }
+
+console.log(maxDepth('(1)+((2))+(((3)))')) // 3
