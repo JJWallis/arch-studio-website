@@ -16,11 +16,14 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
 
-//
-
 function minimumSum(num: number): number {
-   const split = Number(String(num).split('').sort())
-   return 0
+   const split = String(num).split('').sort()
+   const secondLowest = split[1]
+   split[1] = split[2]
+   split[2] = secondLowest
+   const firstNum = Number(split.slice(0, split.length / 2).join(''))
+   const secondNum = Number(split.slice(split.length / 2).join(''))
+   return firstNum + secondNum
 }
 
-console.log(minimumSum(2932)) // 52
+console.log(minimumSum(2932))
