@@ -16,6 +16,16 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
 
+// Goal Parser that can interpret a string command which
+// consists of an alphabet of "G", "()" and/or "(al)" in some order
+// "G" => "G"
+// "()" => "o"
+// "(al)" => "al"
+// The interpreted strings are then concatenated in the original order
+// Given the string command, return the Goal Parser's interpretation of command
+
 function interpret(command: string): string {
    return ''
 }
+
+console.log(interpret('G()(al)'))
