@@ -15,3 +15,7 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
+
+function interpret(command: string): string {
+   return ''
+}
