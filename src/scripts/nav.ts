@@ -17,10 +17,15 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach?, can go back if run into issue
 
 function maxDepth(s: string): number {
-   const split = s.split('+')
-   console.log(split)
-   // split str at '('
-   // reduce over S =
+   const strArr = s.split('')
+   console.log(strArr)
+
+   strArr.map((valOuter, idxOuter) =>
+      strArr.map((valuInner, idxInner) => {
+         if (idxOuter !== idxInner) {
+         }
+      })
+   )
    return 0
 }
 
