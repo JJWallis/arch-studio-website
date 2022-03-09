@@ -25,7 +25,7 @@ hamburger.addEventListener('click', () => {
 // Given the string command, return the Goal Parser's interpretation of command
 
 function interpret(command: string): string {
-   return ''
+   return command.replace(/(\(al\))/gi, 'al').replace(/(\(\))/g, 'o')
 }
 
-console.log(interpret('G()(al)'))
+console.log(interpret('G()()()()(al)')) // 'Goal'
