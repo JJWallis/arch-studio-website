@@ -20,12 +20,13 @@ function maxDepth(s: string): number {
    const strArr = s.split('')
    console.log(strArr)
 
-   strArr.map((valOuter, idxOuter) =>
-      strArr.map((valuInner, idxInner) => {
-         if (idxOuter !== idxInner) {
-         }
+   strArr.map((valOuter, idxOuter) => {
+      let total = 0
+      strArr.map((valInner, idxInner) => {
+         // logic
+         if (idxOuter === idxInner) return total
       })
-   )
+   })
    return 0
 }
 
