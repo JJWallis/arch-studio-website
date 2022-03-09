@@ -18,16 +18,23 @@ hamburger.addEventListener('click', () => {
 
 function maxDepth(s: string): number {
    const strArr = s.split('')
-   console.log(strArr)
-
-   strArr.map((valOuter, idxOuter) => {
-      let total = 0
-      strArr.map((valInner, idxInner) => {
-         // logic
-         if (idxOuter === idxInner) return total
+   const results = strArr
+      .map((_, idxOuter) => {
+         let leftTotal = 0
+         let rightTotal = 0
+         return strArr
+            .map((valInner, idxInner) => {
+               valInner === '('
+                  ? leftTotal++
+                  : valInner === ')'
+                  ? rightTotal++
+                  : null
+               if (idxOuter === idxInner) return leftTotal - rightTotal
+            })
+            .filter((val) => val !== undefined)
       })
-   })
-   return 0
+      .flat(1)
+   return Math.max(...results)
 }
 
 console.log(maxDepth('(1+(2*3)+((8)/4))+1')) // 3
