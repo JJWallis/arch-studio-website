@@ -21,18 +21,37 @@ hamburger.addEventListener('click', () => {
 //    email: string
 //    date: string
 //    password: string
-//  }
+// }
 
-//  const App: React.FC = () => {
-//    const [inputs, setInputs] = React.useState()
+// type InputKey = keyof Inputs
+
+// const App: React.FC = () => {
+//    const [inputs, setInputs] = React.useState<Inputs>({
+//       name: '',
+//       email: '',
+//       date: '',
+//       password: '',
+//    })
+//    const [current, setCurrent] = React.useState<Partial<Inputs>>('name')
+
+//    //   type dynamic - button + input
 
 //    return (
-//        <div>
+//       <form id="form">
 //          <button>&larr; Back</button>
+//          <legend>Form control</legend>
 //          <label for="label">label</label>
-//           <input id="label"  />
-//        </div>
+//          <input
+//             id="label"
+//             name="test"
+//             value={inputs[current as InputKey]}
+//             onChange={(e) =>
+//                setInputs({ ...inputs, [current as InputKey]: e.target.value })
+//             }
+//          />
+//          <button>Next</button>
+//       </form>
 //    )
-//  }
+// }
 
-//  ReactDOM.render(<App />, document.getElementById('app'));
+// ReactDOM.render(<App />, document.getElementById('app'))
