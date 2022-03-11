@@ -16,14 +16,23 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
 
-function minimumSum(num: number): number {
-   const split = String(num).split('').sort()
-   const secondLowest = split[1]
-   split[1] = split[2]
-   split[2] = secondLowest
-   const firstNum = Number(split.slice(0, split.length / 2).join(''))
-   const secondNum = Number(split.slice(split.length / 2).join(''))
-   return firstNum + secondNum
-}
+// interface Inputs {
+//    name: string
+//    email: string
+//    date: string
+//    password: string
+//  }
 
-console.log(minimumSum(2932))
+//  const App: React.FC = () => {
+//    const [inputs, setInputs] = React.useState()
+
+//    return (
+//        <div>
+//          <button>&larr; Back</button>
+//          <label for="label">label</label>
+//           <input id="label"  />
+//        </div>
+//    )
+//  }
+
+//  ReactDOM.render(<App />, document.getElementById('app'));
