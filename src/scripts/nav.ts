@@ -16,42 +16,25 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach?, can go back if run into issue
 
-// interface Inputs {
-//    name: string
-//    email: string
-//    date: string
-//    password: string
-// }
-
-// type InputKey = keyof Inputs
+// const initialState = ['', '', '', '']
 
 // const App: React.FC = () => {
-//    const [inputs, setInputs] = React.useState<Inputs>({
-//       name: '',
-//       email: '',
-//       date: '',
-//       password: '',
-//    })
-//    const [current, setCurrent] = React.useState<Partial<Inputs>>('name')
+//   const [inputs, setInputs] = React.useState<string[]>(initialState)
+//   const [current, setCurrent] = React.useState<number>(0)
 
-//    //   type dynamic - button + input
+//       //   type dynamic - button + input
+//       //   label dynamic
+//       //   input name dynamic
 
-//    return (
+//   return (
 //       <form id="form">
-//          <button>&larr; Back</button>
-//          <legend>Form control</legend>
-//          <label for="label">label</label>
-//          <input
-//             id="label"
-//             name="test"
-//             value={inputs[current as InputKey]}
-//             onChange={(e) =>
-//                setInputs({ ...inputs, [current as InputKey]: e.target.value })
-//             }
-//          />
-//          <button>Next</button>
+//         <button>&larr; Back</button>
+//         <legend>Form control</legend>
+//         <label for="input">label</label>
+//         <input id="input" name="test" value={inputs[current]} onChange={(e) => setInputs([...inputs, inputs[current]: e.target.value])}  />
+//         <button>Next</button>
 //       </form>
-//    )
+//   )
 // }
 
-// ReactDOM.render(<App />, document.getElementById('app'))
+// ReactDOM.render(<App />, document.getElementById('app'));
