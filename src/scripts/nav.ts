@@ -28,35 +28,70 @@ function cellsInRange(s: string): string[] {
 
 console.log(cellsInRange('K1:L2')) // ['K1', 'K2', 'L1', 'L2']
 
-//   type dynamic - button + input
-//   label dynamic
-//   input name dynamic + value required to make next/submit btn enabled
-//       ref to focus input
-
-// const initialState = ['', '', '', '']
+// const initialState = [
+//    { name: 'name', value: '' },
+//    { name: 'email', value: '' },
+//    { name: 'date', value: '' },
+//    { name: 'password', value: '' },
+// ]
 
 // const App: React.FC = () => {
-//   const [inputs, setInputs] = React.useState(initialState)
-//   const [current, setCurrent] = React.useState(0)
+//    const [inputs, setInputs] = React.useState(initialState)
+//    const [current, setCurrent] = React.useState(0)
+//    const inputRef = React.useRef(null)
+//    const label = inputs[current].name
 
-// //   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-// //     inputs[current] = e.target.value
-// //   }
+//    const handleSubmit = (e: React.FormEvent<HTMLFormElement>, data) => {
+//       e.preventDefault()
+//       const [name, email, date, password] = data
+//       const dataToSend = {
+//          // name.name: name.value,
+//          // email.name: email.value,
+//       }
+//       // async/await + validation
+//       // show success screen
+//       return null
+//    }
 
-//   const handleSubmit = (e: React.SubmitEvent) => {
-//     // async/await
-//     return null
-//   }
+//    const handleChange = (e: any) => {
+//       const desired = [...inputs]
+//       desired[current].value = e.target.value
+//       setInputs(desired)
+//    }
 
-//   return (
-//       <form id="form" onSubmit={handleSubmit}>
-//         <button type="button">&larr; Back</button>
-//         <legend>Form control</legend>
-//         <label for="input">label</label>
-//         <input id="input" value={inputs[current]} onChange={(e) => setInputs([...inputs, inputs[current]: e.target.value])}  />
-//         <button>Next</button>
+//    React.useEffect(() => inputRef.current.focus(), [current])
+
+//    return (
+//       <form id="form" onSubmit={(e) => handleSubmit(e, inputs)}>
+//          <button
+//             type="button"
+//             style={{ display: `${!current ? 'none' : 'block'}` }}
+//             onClick={() => setCurrent((prev) => prev - 1)}
+//          >
+//             &larr; Back
+//          </button>
+//          <legend>Multi-step form</legend>
+//          <label htmlFor={label}>{label}</label>
+//          <input
+//             type={
+//                inputs[current].name === 'name' ? 'text' : inputs[current].name
+//             }
+//             ref={inputRef}
+//             id={label}
+//             value={inputs[current].value}
+//             onChange={handleChange}
+//          />
+//          <button
+//             type={current === inputs.length - 1 ? 'submit' : 'button'}
+//             disabled={!inputs[current].value}
+//             onClick={() =>
+//                current !== inputs.length - 1 && setCurrent((prev) => prev + 1)
+//             }
+//          >
+//             {current === inputs.length - 1 ? 'Submit' : 'Next'}
+//          </button>
 //       </form>
-//   )
+//    )
 // }
 
-// ReactDOM.render(<App />, document.getElementById('app'));
+// ReactDOM.render(<App />, document.getElementById('app'))
