@@ -44,10 +44,10 @@ console.log(cellsInRange('K1:L2')) // ['K1', 'K2', 'L1', 'L2']
 //    const handleSubmit = (e: React.FormEvent<HTMLFormElement>, data) => {
 //       e.preventDefault()
 //       const [name, email, date, password] = data
-//       const dataToSend = {
-//          // name.name: name.value,
-//          // email.name: email.value,
-//       }
+//       const dataToSend = data.reduce(
+//          (acc, { name, value }) => ({ ...acc, [name]: value }),
+//          {}
+//       )
 //       // async/await + validation
 //       // show success screen
 //       return null
@@ -59,7 +59,7 @@ console.log(cellsInRange('K1:L2')) // ['K1', 'K2', 'L1', 'L2']
 //       setInputs(desired)
 //    }
 
-//    React.useEffect(() => inputRef.current.focus(), [current])
+//    // React.useEffect(() => inputRef.current.focus() ,[current])
 
 //    return (
 //       <form id="form" onSubmit={(e) => handleSubmit(e, inputs)}>
