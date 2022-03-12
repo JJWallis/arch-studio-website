@@ -18,11 +18,12 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function numJewelsInStones(jewels: string, stones: string): number {
-   // split jewels into array to determine each char to match
-   // loop over arr + match str with each char + return length of that match if truthy (avoid zero)
-   // if not filter through to remove all zeros
-   // reduce over arr to add total
-   return 0
+   const jewelsUnique = [...new Set(jewels.split(''))]
+   const stonesArr = stones.split('')
+   const match = jewelsUnique
+      .map((jewel) => stonesArr.filter((stone) => jewel === stone).length)
+      .reduce((acc, curr) => acc + curr, 0)
+   return match
 }
 
 console.log(numJewelsInStones('aA', 'aAAbbbb')) // 3
