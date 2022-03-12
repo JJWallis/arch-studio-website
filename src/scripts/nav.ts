@@ -20,10 +20,8 @@ hamburger.addEventListener('click', () => {
 function numJewelsInStones(jewels: string, stones: string): number {
    const jewelsUnique = [...new Set(jewels.split(''))]
    const regex = new RegExp(jewelsUnique.join('|'), 'g')
-   console.log(regex)
-   // const match = jewelsUnique
-   // .map((jewel) => )
-   return 0
+   const match = stones.match(regex).length
+   return match
 }
 
 console.log(numJewelsInStones('aA', 'aAAbbbb')) // 3
