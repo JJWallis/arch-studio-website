@@ -17,14 +17,11 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-function numJewelsInStones(jewels: string, stones: string): number {
-   const jewelsUnique = [...new Set(jewels.split(''))]
-   const regex = new RegExp(jewelsUnique.join('|'), 'g')
-   const match = stones.match(regex).length
-   return match
+function cellsInRange(s: string): string[] {
+   return []
 }
 
-console.log(numJewelsInStones('aA', 'aAAbbbb')) // 3
+console.log(cellsInRange('K1:L2')) // ['K1', 'K2', 'L1', 'L2']
 
 // const initialState = ['', '', '', '']
 
