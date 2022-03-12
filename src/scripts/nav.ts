@@ -17,6 +17,10 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
+function numJewelsInStones(jewels: string, stones: string): number {
+   return 0
+}
+
 // const initialState = ['', '', '', '']
 
 // const App: React.FC = () => {
