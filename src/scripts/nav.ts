@@ -18,10 +18,11 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function cellsInRange(s: string): string[] {
+   const [start, end] = s.split(':')
    // declare alphabet str/arr
    // letter range = find() starting letter + retrieve index | find() index of ending letter too
    // number range = + Math.min of starting number + Math.max of ending number
-   // this will determine how many times we iterate over each letter + push(letterWithCurrNum) to resulting arr
+   // this will determine how many times we iterate over each letter + push(letterWithCurrNum) to resulting arr - including starting/ending num
    return []
 }
 
