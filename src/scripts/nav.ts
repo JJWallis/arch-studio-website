@@ -10,11 +10,12 @@ hamburger.addEventListener('click', () => {
 })
 
 // OOP Style
-// Understand problem (repeat it with diff words)
+// easy to `understand` vs `maintainable` code vs shortest method
+// Understand problem (repeat it with diff words) - Asking `clarifying` questions (unclear requirements + edge cases)
 // devise a plan - take lager issue + break down into smaller
 // execute plan - from outline of plan via comments
 // what do I currently know
-// review solution - better approach?, can go back if run into issue
+// review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 // const initialState = ['', '', '', '']
 
