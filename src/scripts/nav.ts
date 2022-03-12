@@ -28,22 +28,32 @@ function cellsInRange(s: string): string[] {
 
 console.log(cellsInRange('K1:L2')) // ['K1', 'K2', 'L1', 'L2']
 
+//   type dynamic - button + input
+//   label dynamic
+//   input name dynamic + value required to make next/submit btn enabled
+//       ref to focus input
+
 // const initialState = ['', '', '', '']
 
 // const App: React.FC = () => {
-//   const [inputs, setInputs] = React.useState<string[]>(initialState)
-//   const [current, setCurrent] = React.useState<number>(0)
+//   const [inputs, setInputs] = React.useState(initialState)
+//   const [current, setCurrent] = React.useState(0)
 
-//       //   type dynamic - button + input
-//       //   label dynamic
-//       //   input name dynamic
+// //   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+// //     inputs[current] = e.target.value
+// //   }
+
+//   const handleSubmit = (e: React.SubmitEvent) => {
+//     // async/await
+//     return null
+//   }
 
 //   return (
-//       <form id="form">
-//         <button>&larr; Back</button>
+//       <form id="form" onSubmit={handleSubmit}>
+//         <button type="button">&larr; Back</button>
 //         <legend>Form control</legend>
 //         <label for="input">label</label>
-//         <input id="input" name="test" value={inputs[current]} onChange={(e) => setInputs([...inputs, inputs[current]: e.target.value])}  />
+//         <input id="input" value={inputs[current]} onChange={(e) => setInputs([...inputs, inputs[current]: e.target.value])}  />
 //         <button>Next</button>
 //       </form>
 //   )
