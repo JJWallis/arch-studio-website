@@ -21,6 +21,8 @@ function numJewelsInStones(jewels: string, stones: string): number {
    return 0
 }
 
+console.log(numJewelsInStones('aA', 'aAAbbbb'))
+
 // const initialState = ['', '', '', '']
 
 // const App: React.FC = () => {
