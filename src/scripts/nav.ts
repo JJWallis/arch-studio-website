@@ -32,7 +32,9 @@ function minTimeToVisitAllPoints(points: number[][]): number {
    // only need to go diagonally when there are are no repeated coordinates
    // go diagonally until one coordinate is found - then incremement/decrememnt to match the other
    let seconds = 0
-   return 0
+   return points.reduce((acc, curr) => {
+      return 0
+   }, 0)
 }
 
 console.log(
