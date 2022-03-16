@@ -27,17 +27,18 @@ hamburger.addEventListener('click', () => {
 // You have to visit the points in the same order as they appear in the array.
 // You are allowed to pass through points that appear later in the order, but these do not count as visits.
 
-function minTimeToVisitAllPoints(points: number[][]): number {
-   // if there is a repeated point, we can skip it (only need to find diff with other)
-   // only need to go diagonally when there are are no repeated coordinates
-   // go diagonally until one coordinate is found - then incremement/decrememnt to match the other
-   return points.reduce((total, [currX, currY], idx, arr) => {
-      let seconds = 2
-      if (idx === arr.length - 1) return total
-      const [nextX, nextY] = arr[idx + 1]
-      return total + seconds
-   }, 0)
-}
+const minTimeToVisitAllPoints = (points) =>
+   points
+      .slice(0, points.length - 1)
+      .reduce(
+         (acc, [x, y], idx) =>
+            acc +
+            Math.max(
+               Math.abs(x - points[idx + 1][0]),
+               Math.abs(y - points[idx + 1][1])
+            ),
+         0
+      )
 
 console.log(
    minTimeToVisitAllPoints([
