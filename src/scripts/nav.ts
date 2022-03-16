@@ -17,7 +17,7 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-//On a 2D plane, there are n points with integer coordinates points[i] = [xi, yi].
+// On a 2D plane, there are n points with integer coordinates points[i] = [xi, yi].
 // Return the minimum time in seconds to visit all the points in the order given by points.
 // You can move according to these rules:
 // In 1 second, you can either:
@@ -28,6 +28,10 @@ hamburger.addEventListener('click', () => {
 // You are allowed to pass through points that appear later in the order, but these do not count as visits.
 
 function minTimeToVisitAllPoints(points: number[][]): number {
+   // if there is a repeated point, we can skip it (only need to find diff with other)
+   // only need to go diagonally when there are are no repeated coordinates
+   // go diagonally until one coordinate is found - then incremement/decrememnt to match the other
+   let seconds = 0
    return 0
 }
 
