@@ -21,8 +21,19 @@ hamburger.addEventListener('click', () => {
 // A subarray is a contiguous subsequence of the array.
 // Return the sum of all odd-length subarrays of arr.
 
-function sumOddLengthSubarrays(arr: number[]): number {
-   return 0
+function sumOddLengthSubarrays(arr: number[]) {
+   const total = arr.reduce((acc, curr) => acc + curr, 0)
+   const results: number[][] = []
+   let curr: number[] = []
+   if (arr.length <= 2) return total
+   for (let i = 0; i < arr.length; i++) {
+      curr.push(arr[i])
+      if (i > 0 && curr.length % 2 !== 0) {
+         results.push(curr)
+         curr = []
+      }
+   }
+   return results
 }
 
-console.log(sumOddLengthSubarrays([1, 4, 2, 5, 3]))
+console.log(sumOddLengthSubarrays([1, 4, 2, 5, 3])) // 58
