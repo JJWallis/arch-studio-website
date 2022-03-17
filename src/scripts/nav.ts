@@ -20,10 +20,13 @@ hamburger.addEventListener('click', () => {
 // Define an array nums where nums[i] = start + 2 * i (0-indexed) and n == nums.length.
 // Return the bitwise XOR of all elements of nums.
 
-function xorOperation(n: number, start: number): number {
-   const results: number[] = []
-   for (let i = 0; i < n; i++) results.push(start + 2 * i)
-   return results.reduce((acc, curr, idx) => (acc = curr ^ results[idx + 1]), 0)
+var xorOperation = function (n, start) {
+   let arr = [],
+      xor
+   for (let i = 0; i < n; i++) arr.push(start + i * 2)
+   xor = arr[0]
+   for (let i = 1; i < n; i++) xor = arr[i] ^ xor
+   return xor
 }
 
-console.log(xorOperation(4, 3)) // 8
+console.log(xorOperation(5, 0))
