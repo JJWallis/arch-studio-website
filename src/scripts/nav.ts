@@ -20,13 +20,8 @@ hamburger.addEventListener('click', () => {
 // Define an array nums where nums[i] = start + 2 * i (0-indexed) and n == nums.length.
 // Return the bitwise XOR of all elements of nums.
 
-var xorOperation = function (n, start) {
-   let arr = [],
-      xor
-   for (let i = 0; i < n; i++) arr.push(start + i * 2)
-   xor = arr[0]
-   for (let i = 1; i < n; i++) xor = arr[i] ^ xor
-   return xor
+function sumOddLengthSubarrays(arr: number[]): number {
+   return 0
 }
 
-console.log(xorOperation(5, 0))
+console.log(sumOddLengthSubarrays([1, 4, 2, 5, 3]))
