@@ -25,7 +25,13 @@ hamburger.addEventListener('click', () => {
 //  Return the number of matches played in the tournament until a winner is decided.
 
 function numberOfMatches(n: number): number {
-   return 0
+   for (let i = 0; i > 1; i++) {
+      if (n % 2 === 0) {
+         n /= 2
+         continue
+      }
+      return i
+   }
 }
 
 console.log(numberOfMatches(7)) // 6
