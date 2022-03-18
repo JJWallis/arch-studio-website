@@ -17,23 +17,11 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-// Given an array of positive integers arr, calculate the sum of all possible odd-length subarrays.
-// A subarray is a contiguous subsequence of the array.
-// Return the sum of all odd-length subarrays of arr.
+// Given an integer num, return the number of steps to reduce it to zero.
+// In one step, if the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.
 
-const sumOddLengthSubarrays = (arr) => {
-   let n = arr.length
-   let sum = 0
-
-   let k = 1
-   while (n >= k) {
-      for (let i = 0; i < n - k + 1; i++) {
-         const currentSubArray = arr.slice(i, i + k)
-         sum += currentSubArray.reduce((a, b) => a + b, 0)
-      }
-      k += 2
-   }
-   return sum
+function numberOfSteps(num: number): number {
+   return 0
 }
 
-console.log(sumOddLengthSubarrays([1, 4, 2, 5, 3])) // 58
+console.log(numberOfSteps(14)) // 6
