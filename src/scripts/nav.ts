@@ -21,7 +21,13 @@ hamburger.addEventListener('click', () => {
 // In one step, if the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.
 
 function numberOfSteps(num: number): number {
-   return 0
+   for (let i = 1; num >= 0; i++) {
+      if (num === 0) return i
+      console.log(num)
+      num = num % 2 === 0 ? num / 2 : num - 1
+      console.log(num)
+      return
+   }
 }
 
 console.log(numberOfSteps(14)) // 6
