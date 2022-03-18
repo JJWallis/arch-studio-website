@@ -17,14 +17,15 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-// Given an integer num, return the number of steps to reduce it to zero.
-// In one step, if the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.
+//  You are given an integer n, the number of teams in a tournament that has strange rules:
+//  If the current number of teams is even, each team gets paired with another team.
+//  A total of n / 2 matches are played, and n / 2 teams advance to the next round.
+//  If the current number of teams is odd, one team randomly advances in the tournament, and the rest gets paired.
+//  A total of (n - 1) / 2 matches are played, and (n - 1) / 2 + 1 teams advance to the next round.
+//  Return the number of matches played in the tournament until a winner is decided.
 
-function numberOfSteps(num: number): number {
-   for (let i = 1; num > 0; i++) {
-      if (num === 1) return i
-      num = num % 2 === 0 ? num / 2 : num - 1
-   }
+function numberOfMatches(n: number): number {
+   return 0
 }
 
-console.log(numberOfSteps(8)) // 4
+console.log(numberOfMatches(7)) // 6
