@@ -17,79 +17,72 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-// const initialState = [
-//    { name: 'name', value: '' },
-//    { name: 'email', value: '' },
-//    { name: 'date', value: '' },
-//    { name: 'password', value: '' },
+// const initialData = [
+//    2, 6, 1, 10, 1, 2, 1, 2, 2, 7, 7, 1, 3, 7, 2, 5, 7, 3, 5, 7, 10, 6, 3, 8, 3,
+//    9, 7, 2, 9, 4, 1, 4, 8, 1, 10, 8, 4, 9, 2, 1, 2, 7, 1, 7, 7, 7, 10, 1, 7, 2,
+//    8, 4, 2, 1, 8, 9, 4, 4, 8, 7, 3, 10, 5, 10, 9, 9, 10, 4, 8, 2, 5, 9, 10, 7,
+//    6, 5, 10, 10, 7, 9, 6, 2, 6, 7, 8, 3, 10, 7, 10, 3, 2, 1, 1, 8, 5,
 // ]
 
-// const App: React.FC = () => {
-//    const [inputs, setInputs] = React.useState(initialState)
-//    const [current, setCurrent] = React.useState(0)
-//    const [isSuccess, setIsSuccess] = React.useState(false)
-//    const inputRef = React.useRef(null)
-//    const label = inputs[current].name
+// const gatherColumns = (): number[] => {
+//    const data = [...new Set(initialData)].sort()
+//    const tenIdx = data.indexOf(data.find((num) => num === 10))
+//    data.splice(tenIdx, 1)
+//    data.push(10)
+//    return data
+// }
 
-//    const handleSubmit = (e: React.FormEvent<HTMLFormElement>, data) => {
-//       e.preventDefault()
-//       if (inputs.every(({ value }) => value)) {
-//          const [name, email, date, password] = data
-//          const dataToSend = data.reduce(
-//             (acc, { name, value }) => ({ ...acc, [name]: value }),
-//             {}
-//          )
-//          setIsSuccess(true)
-//       }
+// const gatherRows = () => {
+//    const columns = gatherColumns()
+//    const data = columns.map(
+//       (num) => initialData.filter((number) => num === number).length
+//    )
+//    return data
+// }
+
+// const App = () => {
+//    const [randomNumbers, setRandomNumbers] = React.useState(initialData)
+//    const columns = gatherColumns()
+//    const rows = gatherRows()
+//    const max = Math.max(...rows)
+//    const printRows = () => {
+//       const results = []
+//       for (let i = 0; i <= max; i++) results.push(i)
+//       return results.reverse()
 //    }
 
-//    const handleChange = (e: any) => {
-//       const desired = [...inputs]
-//       desired[current].value = e.target.value
-//       setInputs(desired)
+//    const gatherColsRows = () => {
+//       return columns
+//          .reverse()
+//          .map((col, idx) => ({ number: col, amount: rows[idx] }))
 //    }
 
-//    React.useEffect(() => inputRef.current.focus(), [current])
+//    const colRows = gatherColsRows()
 
-//    return !isSuccess ? (
-//       <>
-//          <button
-//             hidden={!current}
-//             onClick={() => setCurrent((prev) => prev - 1)}
-//          >
-//             &larr; Back
-//          </button>
-//          <form onSubmit={(e) => handleSubmit(e, inputs)}>
-//             <label htmlFor={label}>{label}</label>
-//             <input
-//                type={
-//                   inputs[current].name === 'name'
-//                      ? 'text'
-//                      : inputs[current].name
-//                }
-//                ref={inputRef}
-//                id={label}
-//                value={inputs[current].value}
-//                onChange={handleChange}
-//             />
-//             <button
-//                type={current === inputs.length - 1 ? 'submit' : 'button'}
-//                disabled={!inputs[current].value}
-//                onClick={() =>
-//                   current !== inputs.length - 1 &&
-//                   setCurrent((prev) => prev + 1)
-//                }
-//             >
-//                {current === inputs.length - 1 ? 'Submit' : 'Next'}
-//             </button>
-//          </form>
-//       </>
-//    ) : (
-//       <>
-//          {inputs.map(({ name, value }) => (
-//             <p>{name + ' ' + value}</p>
-//          ))}
-//       </>
+//    return (
+//       <main className="main">
+//          <div className="flex-ct">
+//             <ul className="graph__rows">
+//                {printRows().map((num, idx) => (
+//                   <li key={idx}>{num}</li>
+//                ))}
+//             </ul>
+//             <article className="graph">
+//                {colRows.map(({ amount }, idx) => (
+//                   <div
+//                      key={idx}
+//                      style={{ height: `${Math.floor((amount / max) * 100)}%` }}
+//                      className="column"
+//                   ></div>
+//                ))}
+//                <div className="graph__cols">
+//                   {columns.map((num, idx) => (
+//                      <li key={idx}>{num}</li>
+//                   ))}
+//                </div>
+//             </article>
+//          </div>
+//       </main>
 //    )
 // }
 
