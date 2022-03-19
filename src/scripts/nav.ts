@@ -17,16 +17,77 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-function maximum69Number(num: number): number {
-   const inputArr = String(num).split('')
-   const results = []
-   for (let i = 0; i < inputArr.length; i++) {
-      const copy = [...inputArr]
-      const curr = copy[i]
-      copy[i] = curr === '6' ? '9' : '6'
-      results.push(Number(copy.join('')))
-   }
-   return Math.max(...results)
-}
+// const initialState = [
+//    { name: 'name', value: '' },
+//    { name: 'email', value: '' },
+//    { name: 'date', value: '' },
+//    { name: 'password', value: '' },
+// ]
 
-console.log(maximum69Number(9669))
+// const App: React.FC = () => {
+//    const [inputs, setInputs] = React.useState(initialState)
+//    const [current, setCurrent] = React.useState(0)
+//    const [isSuccess, setIsSuccess] = React.useState(false)
+//    const inputRef = React.useRef(null)
+//    const label = inputs[current].name
+
+//    const handleSubmit = (e: React.FormEvent<HTMLFormElement>, data) => {
+//       e.preventDefault()
+//       if (inputs.every(({ value }) => value)) {
+//          const [name, email, date, password] = data
+//          const dataToSend = data.reduce(
+//             (acc, { name, value }) => ({ ...acc, [name]: value }),
+//             {}
+//          )
+//          setIsSuccess(true)
+//       }
+//    }
+
+//    const handleChange = (e: any) => {
+//       const desired = [...inputs]
+//       desired[current].value = e.target.value
+//       setInputs(desired)
+//    }
+
+//    React.useEffect(() => inputRef.current.focus(), [current])
+
+//    return !isSuccess ? (
+//       <>
+//          <button
+//             hidden={!current}
+//             onClick={() => setCurrent((prev) => prev - 1)}
+//          >
+//             &larr; Back
+//          </button>
+//          <form onSubmit={(e) => handleSubmit(e, inputs)}>
+//             <label htmlFor={label}>{label}</label>
+//             <input
+//                type={
+//                   inputs[current].name === 'name'
+//                      ? 'text'
+//                      : inputs[current].name
+//                }
+//                ref={inputRef}
+//                id={label}
+//                value={inputs[current].value}
+//                onChange={handleChange}
+//             />
+//             <button
+//                type={current === inputs.length - 1 ? 'submit' : 'button'}
+//                disabled={!inputs[current].value}
+//                onClick={() => setCurrent((prev) => prev + 1)}
+//             >
+//                {current === inputs.length - 1 ? 'Submit' : 'Next'}
+//             </button>
+//          </form>
+//       </>
+//    ) : (
+//       <>
+//          {inputs.map(({ name, value }) => (
+//             <p>{name + ' ' + value}</p>
+//          ))}
+//       </>
+//    )
+// }
+
+// ReactDOM.render(<App />, document.getElementById('app'))
