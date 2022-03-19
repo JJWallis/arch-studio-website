@@ -75,7 +75,10 @@ hamburger.addEventListener('click', () => {
 //             <button
 //                type={current === inputs.length - 1 ? 'submit' : 'button'}
 //                disabled={!inputs[current].value}
-//                onClick={() => setCurrent((prev) => prev + 1)}
+//                onClick={() =>
+//                   current !== inputs.length - 1 &&
+//                   setCurrent((prev) => prev + 1)
+//                }
 //             >
 //                {current === inputs.length - 1 ? 'Submit' : 'Next'}
 //             </button>
