@@ -17,20 +17,17 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-//  You are given an integer n, the number of teams in a tournament that has strange rules:
-//  If the current number of teams is even, each team gets paired with another team.
-//  A total of n / 2 matches are played, and n / 2 teams advance to the next round.
-//  If the current number of teams is odd, one team randomly advances in the tournament, and the rest gets paired.
-//  A total of (n - 1) / 2 matches are played, and (n - 1) / 2 + 1 teams advance to the next round.
-//  Return the number of matches played in the tournament until a winner is decided.
-
-function numberOfMatches(n: number): number {
-   let matches = 0
-   for (let i = 0; n > 1; i++) {
-      matches += n % 2 === 0 ? n / 2 : (n - 1) / 2
-      n = n % 2 === 0 ? n / 2 : (n - 1) / 2 + 1
-      if (n === 1) return matches
+class ListNode {
+   val: number
+   next: ListNode | null
+   constructor(val?: number, next?: ListNode | null) {
+      this.val = val === undefined ? 0 : val
+      this.next = next === undefined ? null : next
    }
 }
 
-console.log(numberOfMatches(14)) // 7
+function getDecimalValue(head: ListNode | null): number {
+   return Number.parseInt(head.join(''), 10)
+}
+
+console.log(getDecimalValue(null))
