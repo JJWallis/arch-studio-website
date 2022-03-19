@@ -20,12 +20,13 @@ hamburger.addEventListener('click', () => {
 function maximum69Number(num: number): number {
    const inputArr = String(num).split('')
    const results = []
-   console.log(inputArr)
    for (let i = 0; i < inputArr.length; i++) {
       const copy = [...inputArr]
+      const curr = copy[i]
+      copy[i] = curr === '6' ? '9' : '6'
+      results.push(Number(copy.join('')))
    }
-
-   return 0
+   return Math.max(...results)
 }
 
 console.log(maximum69Number(9669))
