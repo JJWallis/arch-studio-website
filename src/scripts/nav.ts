@@ -17,17 +17,8 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-class ListNode {
-   val: number
-   next: ListNode | null
-   constructor(val?: number, next?: ListNode | null) {
-      this.val = val === undefined ? 0 : val
-      this.next = next === undefined ? null : next
-   }
+function maximum69Number(num: number): number {
+   return 0
 }
 
-function getDecimalValue(head: ListNode | null): number {
-   return Number.parseInt(head.join(''), 10)
-}
-
-console.log(getDecimalValue(null))
+console.log(maximum69Number(9669))
