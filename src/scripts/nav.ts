@@ -52,9 +52,11 @@ hamburger.addEventListener('click', () => {
 //    }
 
 //    const gatherColsRows = () => {
-//       return columns
-//          .reverse()
-//          .map((col, idx) => ({ number: col, amount: rows[idx] }))
+//       return columns.reverse().map((col, idx) => ({
+//          number: col,
+//          amount: rows[idx],
+//          color: `hsl(100, 200%, ${idx}%)`,
+//       }))
 //    }
 
 //    const colRows = gatherColsRows()
@@ -68,10 +70,13 @@ hamburger.addEventListener('click', () => {
 //                ))}
 //             </ul>
 //             <article className="graph">
-//                {colRows.map(({ amount }, idx) => (
+//                {colRows.map(({ amount, color }, idx) => (
 //                   <div
 //                      key={idx}
-//                      style={{ height: `${Math.floor((amount / max) * 100)}%` }}
+//                      style={{
+//                         height: `${Math.floor((amount / max) * 100)}%`,
+//                         backgroundColor: `${color}`,
+//                      }}
 //                      className="column"
 //                   ></div>
 //                ))}
