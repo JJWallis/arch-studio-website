@@ -18,6 +18,13 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function maximum69Number(num: number): number {
+   const inputArr = String(num).split('')
+   console.log(inputArr)
+   const results = inputArr.map((num, idx) => {
+      const remaining = inputArr.slice(idx + 1, inputArr.length)
+      return num === '6' ? '9' : '6'
+   })
+   console.log(results)
    return 0
 }
 
