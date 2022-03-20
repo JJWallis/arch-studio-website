@@ -24,11 +24,10 @@ function findGCD(nums: number[]): number {
    const max = Math.max(...nums)
    const min = Math.min(...nums)
    const results = []
-   if (max % 2 !== 0 || min % 2 !== 0) return 1
-   for (let i = 2; i < max; i++) {
-      if (max % i === 0 && min % i === 0) results.push(i)
-   }
+   if (max % 2 !== 0 || min % 2 !== 0) return max === min ? max : 1
+   for (let i = 2; i < max; i++)
+      max % i === 0 && min % i === 0 ? results.push(i) : null
    return Math.max(...results)
 }
 
-console.log(findGCD([2, 5, 6, 9, 10])) // 2
+console.log(findGCD([3, 3])) // 2
