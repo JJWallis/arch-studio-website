@@ -24,10 +24,15 @@ hamburger.addEventListener('click', () => {
 
 function squareIsWhite(coordinates: string): boolean {
    // odd number with even letter = black
-   // even number with odd letter = white
+   // even number with odd letter = black
+   // even number with even letter = white
+   // odd number with odd letter = white
+
    const alphabet = 'abcdefgh'.split('')
+   const letter = coordinates[0]
+   const num = Number(coordinates[1])
    console.log(alphabet)
    return true
 }
 
-console.log(squareIsWhite('a1'))
+console.log(squareIsWhite('a1')) // fqlse
