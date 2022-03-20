@@ -17,17 +17,13 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-// Given an integer array nums, return the greatest common divisor of the smallest number and largest number in nums
-// The greatest common divisor of two numbers is the largest positive integer that evenly divides both numbers
+// You are given coordinates, a string that represents the coordinates of a square of the chessboard
+// Return true if the square is white, and false if the square is black.
+// The coordinate will always represent a valid chessboard square.
+// The coordinate will always have the letter first, and the number second.
 
-function findGCD(nums: number[]): number {
-   const max = Math.max(...nums)
-   const min = Math.min(...nums)
-   const results = []
-   if (max % 2 !== 0 || min % 2 !== 0) return max === min ? max : 1
-   for (let i = 2; i < max; i++)
-      max % i === 0 && min % i === 0 ? results.push(i) : null
-   return Math.max(...results)
+function squareIsWhite(coordinates: string): boolean {
+   return true
 }
 
-console.log(findGCD([3, 3])) // 2
+console.log(squareIsWhite('a1'))
