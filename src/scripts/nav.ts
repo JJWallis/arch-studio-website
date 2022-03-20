@@ -27,11 +27,11 @@ function squareIsWhite(coordinates: string): boolean {
    // even number with odd letter idx = black
    // even number with even letter idx = white
    // odd number with odd letter idx = white
-
    const alphabet = 'abcdefgh'.split('')
-   const letter = alphabet.indexOf(coordinates[0])
+   const letterIDX = alphabet.indexOf(coordinates[0])
    const num = Number(coordinates[1])
-   return true
+   if (num % 2 === 0) return letterIDX % 2 === 0 || false
+   if (num % 2 !== 0) return letterIDX % 2 !== 0 || false
 }
 
-console.log(squareIsWhite('a1')) // fqlse
+console.log(squareIsWhite('h3'))
