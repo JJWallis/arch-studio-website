@@ -21,7 +21,14 @@ hamburger.addEventListener('click', () => {
 // The greatest common divisor of two numbers is the largest positive integer that evenly divides both numbers
 
 function findGCD(nums: number[]): number {
-   return 0
+   const max = Math.max(...nums)
+   const min = Math.min(...nums)
+   const results = []
+   if (max % 2 !== 0 || min % 2 !== 0) return 1
+   for (let i = 2; i < max; i++) {
+      if (max % i === 0 && min % i === 0) results.push(i)
+   }
+   return Math.max(...results)
 }
 
 console.log(findGCD([2, 5, 6, 9, 10])) // 2
