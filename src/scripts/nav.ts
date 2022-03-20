@@ -23,15 +23,14 @@ hamburger.addEventListener('click', () => {
 // The coordinate will always have the letter first, and the number second.
 
 function squareIsWhite(coordinates: string): boolean {
-   // odd number with even letter = black
-   // even number with odd letter = black
-   // even number with even letter = white
-   // odd number with odd letter = white
+   // odd number with even letter idx = black
+   // even number with odd letter idx = black
+   // even number with even letter idx = white
+   // odd number with odd letter idx = white
 
    const alphabet = 'abcdefgh'.split('')
-   const letter = coordinates[0]
+   const letter = alphabet.indexOf(coordinates[0])
    const num = Number(coordinates[1])
-   console.log(alphabet)
    return true
 }
 
