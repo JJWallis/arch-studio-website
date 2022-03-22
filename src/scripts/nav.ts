@@ -23,7 +23,10 @@ hamburger.addEventListener('click', () => {
 // Return true if reversed2 equals num. Otherwise return false.
 
 function isSameAfterReversals(num: number): boolean {
-   return false
+   const isZeros = String(num)
+   const length = isZeros.length
+   if (length === 1) return true
+   return isZeros[length - 1] === '0' ? false : true
 }
 
-console.log(isSameAfterReversals(526)) // true
+console.log(isSameAfterReversals(0)) // true
