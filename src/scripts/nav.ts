@@ -17,21 +17,13 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-// You are given coordinates, a string that represents the coordinates of a square of the chessboard
-// Return true if the square is white, and false if the square is black.
-// The coordinate will always represent a valid chessboard square.
-// The coordinate will always have the letter first, and the number second.
+// Given an integer n, return any array containing n unique integers such that they add up to 0.
 
-function squareIsWhite(coordinates: string): boolean {
-   // odd number with even letter idx = black
-   // even number with odd letter idx = black
-   // even number with even letter idx = white
-   // odd number with odd letter idx = white
-   const alphabet = 'abcdefgh'.split('')
-   const letterIDX = alphabet.indexOf(coordinates[0])
-   const num = Number(coordinates[1])
-   if (num % 2 === 0) return letterIDX % 2 === 0 || false
-   if (num % 2 !== 0) return letterIDX % 2 !== 0 || false
+function sumZero(n: number): number {
+   return [-7, -1, 1, 3, 4].reduce((acc, curr) => {
+      console.log(acc, curr)
+      return acc + curr
+   }, 0)
 }
 
-console.log(squareIsWhite('h3'))
+console.log(sumZero(5))
