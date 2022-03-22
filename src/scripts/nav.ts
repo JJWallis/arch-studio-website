@@ -19,11 +19,14 @@ hamburger.addEventListener('click', () => {
 
 // Given an integer n, return any array containing n unique integers such that they add up to 0.
 
-function sumZero(n: number): number {
-   return [-7, -1, 1, 3, 4].reduce((acc, curr) => {
-      console.log(acc, curr)
-      return acc + curr
-   }, 0)
+function sumZero(n: number): number[] {
+   let res = []
+   if (n % 2 !== 0) res.push(0)
+   for (let c = Math.floor(n / 2); c > 0; c--) {
+      res.push(-c - 1)
+      res.unshift(c + 1)
+   }
+   return res
 }
 
-console.log(sumZero(5))
+console.log(sumZero(6))
