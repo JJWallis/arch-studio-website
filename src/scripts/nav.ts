@@ -17,16 +17,13 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-// Given an integer n, return any array containing n unique integers such that they add up to 0.
+// Reversing an integer means to reverse all its digits.
+// For example, reversing 2021 gives 1202. Reversing 12300 gives 321 as the leading zeros are not retained.
+// Given an integer num, reverse num to get reversed1, then reverse reversed1 to get reversed2.
+// Return true if reversed2 equals num. Otherwise return false.
 
-function sumZero(n: number): number[] {
-   let res = []
-   if (n % 2 !== 0) res.push(0)
-   for (let c = Math.floor(n / 2); c > 0; c--) {
-      res.push(-c - 1)
-      res.unshift(c + 1)
-   }
-   return res
+function isSameAfterReversals(num: number): boolean {
+   return false
 }
 
-console.log(sumZero(6))
+console.log(isSameAfterReversals(526)) // true
