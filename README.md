@@ -1,6 +1,8 @@
 # Frontend Mentor - Arch Studio multi-page website solution
 
-This is a solution to the [Arch Studio multi-page website challenge](https://www.frontendmentor.io/challenges/arch-studio-multipage-website-wNIbOFYR6) on Frontend Mentor
+This will be a solution to the [Arch Studio multi-page website challenge](https://www.frontendmentor.io/challenges/arch-studio-multipage-website-wNIbOFYR6) on Frontend Mentor
+
+For now I am currently using this repo to practice tasks on Leetcode to improve my problem solving skills
 
 ## Table of contents
 
@@ -50,6 +52,8 @@ Your users should be able to:
 ### What I learned
 
 ### Continued development
+
+I feel like my confidence is increasing when tackling the 'easy' questions listed on Leetcode, although I do still feel there's a significant jump to the next level of difficulty. I look forward to pushing myself further by attempting these harder challenges because these style of questions really help open my eyes to all the different approaches one can take to solve a problem, as well as considering the time and space complexity of that approach.
 
 ### Useful resources
 
