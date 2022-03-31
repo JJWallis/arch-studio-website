@@ -51,7 +51,7 @@ Your users should be able to:
 
 ### What I learned
 
--  Pangram Function = While solving this challenge I learnt how to use the `split(' ')` method to remove all spaces from a string, to then match the original string using both the `join()` and `sort()` methods. In addition, I learnt that the `match()` method returns a regular expression array which I can spread into a `Set()` to remove all duplicates.
+-  Pangram Check Function = While solving this challenge I learnt how to use the `split(' ')` method to remove all spaces from a string and then match the original string using both the `join()` and `sort()` methods. In addition, I learnt that the `match()` method returns a regular expression array which I can spread into a `Set()` to remove all duplicates. `new Set(string.toLowerCase().match(/[a-z]/gi))`.
 
 -  Isogram Function = I learnt how to compare the index positions of letters in two strings to check for any duplicates that are present. Since the `indexOf()` method will return the first matched letter, any duplicate letter will be at a different index to what’s originally returned. Finally, I learnt about the `every()` array method that implements a test to check whether all elements in an array pass the implemented test and ultimately returns a boolean result.
 
