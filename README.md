@@ -57,6 +57,8 @@ I feel like my confidence is increasing when tackling the 'easy' questions liste
 
 ### Useful resources
 
+-  [Leetcode](https://leetcode.com/) - Leetcode is an amazing resource of useful algorithmic style questions that one use to improve their problem solving ability. I appreciate the fact that I can also view other developer's solutions to compare and contrast my approach.
+
 ## Author
 
 -  Website - [Joshua Jameson-Wallis](https://www.joshuajamesonwallis.com/)
