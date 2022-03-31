@@ -63,6 +63,8 @@ Your users should be able to:
 
 -  Transpose Matrix = This was an interesting problem that required me to traverse vertically through a matrix and return a new matrix consisting of each number at the same corresponding index within each sub array. I completed the task by implementing a declarative nested loop using the `map()` method, where the parent loop would provide the current index down to the child loop to grab the required data each iteration. `array[0].map((\_,i)=>array.map(v=>v[I])) ([[1, 2, 3], [1,2,3], [1,2,3]])`
 
+-  Regular Expressions = Regexs are great to learn about not just for solving string-based toy problems, but to have a powerful tool within our arsenal to use in certain situations that frequently arise during our time coding. Whilst attempting these style of problems, I have learnt how to dynamically build regexs by invoking its constructor function instead of defining them through the more common and declarative syntax. `new RegExp(exampleVarName, flagsRequired))`.
+
 ```
 
 ### Continued development
