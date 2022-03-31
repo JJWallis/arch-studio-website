@@ -2,7 +2,7 @@
 
 This will be a solution to the [Arch Studio multi-page website challenge](https://www.frontendmentor.io/challenges/arch-studio-multipage-website-wNIbOFYR6) on Frontend Mentor
 
-For now I am currently using this repo to practice tasks on Leetcode to improve my problem solving skills
+> For now I am currently using this repo to practice tasks on Leetcode to improve my problem solving skills
 
 ## Table of contents
 
