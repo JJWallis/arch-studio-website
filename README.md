@@ -55,6 +55,10 @@ Your users should be able to:
 
 -  Isogram Function = I learnt how to compare the index positions of letters in two strings to check for any duplicates that are present. Since the `indexOf()` method will return the first matched letter, any duplicate letter will be at a different index to what’s originally returned. Finally, I learnt about the `every()` array method that implements a test to check whether all elements in an array pass the implemented test and ultimately returns a boolean result.
 
+-  Encode/Decode Function = I was tasked with implementing an algorithm which would replace consecutive data elements with a single data value alongside the count of that value. I learnt to code out the encode logic by using a regex that would match an indefinite amount of character and number combinations by using groupings and the global flag. `replace(/(\w)\1+/g, (match) => ${match.length} ${match[0]})`. On the other hand, the decode function also used a regex that would match an indefinite number of digits and characters after it, whilst utilising the `repeat()` function to print that character the corresponding number of times.
+
+`decode` = `input.replace(/(\d+)(\w)/g, (x, y, z) => z.repeat(y)` -
+
 ### Continued development
 
 I feel like my confidence is increasing when tackling the 'easy' questions listed on Leetcode, although I do still feel there's a significant jump to the next level of difficulty. I look forward to pushing myself further by attempting these harder challenges because these style of questions really help open my eyes to all the different approaches one can take to solve a problem, as well as considering the time and space complexity of that approach.
