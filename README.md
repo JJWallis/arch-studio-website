@@ -65,7 +65,7 @@ Your users should be able to:
 
 -  Regular Expressions = Regexs are great to learn about not just for solving string-based toy problems, but to have a powerful tool within our arsenal to use in certain situations that frequently arise during our time coding. Whilst attempting these style of problems, I have learnt how to dynamically build regexs by invoking its constructor function instead of defining them through the more common and declarative syntax. `new RegExp(exampleVarName, flagsRequired))`.
 
-```
+-  Time and space complexity = This is another major concept I have learnt about through attempting these challenges, helping me consider my solution's efficiency and pushing myself further to improve it. A great example of this is avoiding nested loops but instead using a more imperative style of loop alongside multiple counters running in parrallel so that we only need to loop once. This is obviously very problem specific, but it's a technique which I have learnt online from others that I use if necessary. Finally, this concept has allowed me to appreciate the difference between mutating data (`forEach()`) and creating further space in memory (`map()`) to avoid doing so, as well as the benefits and cons that come with each approach.
 
 ### Continued development
 
@@ -79,4 +79,3 @@ I feel like my confidence is increasing when tackling the 'easy' questions liste
 
 -  Website - [Joshua Jameson-Wallis](https://www.joshuajamesonwallis.com/)
 -  Linkedin - [Joshua Jameson-Wallis](https://www.linkedin.com/in/joshua-jameson-wallis/)
-```
