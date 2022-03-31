@@ -62,4 +62,4 @@ I feel like my confidence is increasing when tackling the 'easy' questions liste
 ## Author
 
 -  Website - [Joshua Jameson-Wallis](https://www.joshuajamesonwallis.com/)
--  Linkedin - [Joshua Jameson-Wallis](www.linkedin.com/in/joshua-jameson-wallis)
+-  Linkedin - [Joshua Jameson-Wallis](https://www.linkedin.com/in/joshua-jameson-wallis/)
