@@ -53,6 +53,8 @@ Your users should be able to:
 
 -  Pangram Function = While solving this challenge I learnt how to use the `split(' ')` method to remove all spaces from a string, to then match the original string using both the `join()` and `sort()` methods. In addition, I learnt that the `match()` method returns a regular expression array which I can spread into a `Set()` to remove all duplicates.
 
+-  Isogram Function = I learnt how to compare index positions of letters in two strings to check if any duplicates are present. Since the `indexOf()` method will return the first matched letter, - any duplicate letter will be at a different index to what’s originally returned. Finally I learnt about the `every()` array method that implements a test to check whether all elements in an array pass the implemented test and returns a boolean result.
+
 ### Continued development
 
 I feel like my confidence is increasing when tackling the 'easy' questions listed on Leetcode, although I do still feel there's a significant jump to the next level of difficulty. I look forward to pushing myself further by attempting these harder challenges because these style of questions really help open my eyes to all the different approaches one can take to solve a problem, as well as considering the time and space complexity of that approach.
