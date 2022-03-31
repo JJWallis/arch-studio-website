@@ -49,27 +49,11 @@ Your users should be able to:
 
 ### What I learned
 
-```html
-
-```
-
-```css
-
-```
-
-```js
-
-```
-
 ### Continued development
 
 ### Useful resources
-
--  [Example resource 1](https://www.example.com) -
 
 ## Author
 
 -  Website - [Joshua Jameson-Wallis](https://www.joshuajamesonwallis.com/)
 -  Linkedin - [Joshua Jameson-Wallis](www.linkedin.com/in/joshua-jameson-wallis)
-
-###### TODO
