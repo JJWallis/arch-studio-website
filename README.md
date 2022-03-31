@@ -61,6 +61,10 @@ Your users should be able to:
 
 -  Flatten array with reduce = This task involved replicating the `flat()` method logic by using the reduce method to check if the current iterated value was an array. If this was the case, then we would preserve our accumilator and spread the results of the current array onto the end by calling ourself (the current function) again. If the value wasn't an array then we would simply add that value onto the end like the traditional push() method. This was great practice at using recursion to solve a problem, although I will still admit I find it difficult to setup the loop since we almost have to think about it in reverse. `arrOne.reduce((acc, curr) => { return Array.isArray(curr) ? […acc, …makeFlat(curr)] : […acc, curr] }, [])`.
 
+-  Transpose Matrix = This was an interesting problem that required me to traverse vertically through a matrix and return a new matrix consisting of each number at the same corresponding index within each sub array. I completed the task by implementing a declarative nested loop using the `map()` method, where the parent loop would provide the current index down to the child loop to grab the required data each iteration. `array[0].map((\_,i)=>array.map(v=>v[I])) ([[1, 2, 3], [1,2,3], [1,2,3]])`
+
+```
+
 ### Continued development
 
 I feel like my confidence is increasing when tackling the 'easy' questions listed on Leetcode, although I do still feel there's a significant jump to the next level of difficulty. I look forward to pushing myself further by attempting these harder challenges because these style of questions really help open my eyes to all the different approaches one can take to solve a problem, as well as considering the time and space complexity of that approach.
@@ -73,3 +77,4 @@ I feel like my confidence is increasing when tackling the 'easy' questions liste
 
 -  Website - [Joshua Jameson-Wallis](https://www.joshuajamesonwallis.com/)
 -  Linkedin - [Joshua Jameson-Wallis](https://www.linkedin.com/in/joshua-jameson-wallis/)
+```
