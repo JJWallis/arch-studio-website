@@ -57,6 +57,8 @@ Your users should be able to:
 
 -  Encode/Decode Function = I was tasked with implementing an algorithm which would replace consecutive data elements with a single data value alongside the count of that value. I learnt to code out the encode logic by using a regex that would match an indefinite amount of character and number combinations by using groupings and the global flag. `replace(/(\w)\1+/g, (match) => ${match.length} ${match[0]})`. On the other hand, the decode function also used a regex that would match an indefinite number of digits and characters after it, whilst utilising the `repeat()` function to print that character the corresponding number of times. `input.replace(/(\d+)(\w)/g, (x, y, z) => z.repeat(y)`.
 
+-  Reduce to remove duplicates in an array = I was able to recreate the logic automatically implemented by the Set data structure using the reduce method to check whether the current iterated value was present in our returned array accumilator. If the value was present then we would simply return the accumilator itself, else we can preserve the accumilator and add the current value onto the end, mimicking the `push()` method. `return arr.reduce((acc, curr) => acc.includes(curr) ? acc : […acc, curr],[])`.
+
 ### Continued development
 
 I feel like my confidence is increasing when tackling the 'easy' questions listed on Leetcode, although I do still feel there's a significant jump to the next level of difficulty. I look forward to pushing myself further by attempting these harder challenges because these style of questions really help open my eyes to all the different approaches one can take to solve a problem, as well as considering the time and space complexity of that approach.
