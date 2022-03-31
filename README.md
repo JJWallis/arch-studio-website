@@ -59,7 +59,7 @@ Your users should be able to:
 
 -  Reduce to remove duplicates in an array = I was able to recreate the logic automatically implemented by the Set data structure using the reduce method to check whether the current iterated value was present in our returned array accumilator. If the value was present then we would simply return the accumilator itself, else we can preserve the accumilator and add the current value onto the end, mimicking the `push()` method. `return arr.reduce((acc, curr) => acc.includes(curr) ? acc : […acc, curr],[])`.
 
--
+-  Flatten array with reduce = This task involved replicating the `flat()` method logic by using the reduce method to check if the current iterated value was an array. If this was the case, then we would preserve our accumilator and spread the results of the current array onto the end by calling ourself (the current function) again. If the value wasn't an array then we would simply add that value onto the end like the traditional push() method. This was great practice at using recursion to solve a problem, although I will still admit I find it difficult to setup the loop since we almost have to think about it in reverse. `arrOne.reduce((acc, curr) => { return Array.isArray(curr) ? […acc, …makeFlat(curr)] : […acc, curr] }, [])`.
 
 ### Continued development
 
