@@ -18,10 +18,9 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function countConsistentStrings(allowed: string, words: string[]): number {
-   const regex = new RegExp(`[^${allowed}]`, 'g')
-   console.log(regex)
-   const results = words.filter((word) => word.match(regex))
-   console.log(results)
+   const regex = new RegExp(`[{${allowed}}]`, 'g')
+   return words.filter((word) => word.match(regex).length === word.length)
+      .length
 
    // const desiredChars = allowed.split('')
    // const results = []
