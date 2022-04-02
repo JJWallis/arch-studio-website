@@ -17,16 +17,7 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-// Reversing an integer means to reverse all its digits.
-// For example, reversing 2021 gives 1202. Reversing 12300 gives 321 as the leading zeros are not retained.
-// Given an integer num, reverse num to get reversed1, then reverse reversed1 to get reversed2.
-// Return true if reversed2 equals num. Otherwise return false.
-
-function isSameAfterReversals(num: number): boolean {
-   const isZeros = String(num)
-   const length = isZeros.length
-   if (length === 1) return true
-   return isZeros[length - 1] === '0' ? false : true
+function truncateSentence(s: string, k: number): string {
+   return s.split(' ').slice(0, k).join(' ')
 }
-
-console.log(isSameAfterReversals(0)) // true
+console.log(truncateSentence('Hello how are you Contestant', 4))
