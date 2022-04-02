@@ -18,6 +18,12 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function countConsistentStrings(allowed: string, words: string[]): number {
+   const desiredChars = allowed.split('')
+   const results = []
+   for (let i = 0; i < words.length; i++) {
+      // continue statement 
+      words[i].split('').every((char) => char)
+   }
    return [].length
 }
 
