@@ -17,7 +17,8 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-function truncateSentence(s: string, k: number): string {
-   return s.split(' ').slice(0, k).join(' ')
+function countConsistentStrings(allowed: string, words: string[]): number {
+   return [].length
 }
-console.log(truncateSentence('Hello how are you Contestant', 4))
+
+console.log(countConsistentStrings('ab', ['ad', 'bd', 'aaab', 'baa', 'badab'])) // 2
