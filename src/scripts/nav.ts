@@ -18,17 +18,20 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function countConsistentStrings(allowed: string, words: string[]): number {
-   const desiredChars = allowed.split('')
-   const results = []
+   const regex = new RegExp(`[^${allowed}]`, 'g')
+   console.log(regex)
+   const results = words.filter((word) => word.match(regex))
+   console.log(results)
 
+   // const desiredChars = allowed.split('')
+   // const results = []
    // if words.length odd = mutate 1st value + check immediately then run loop below
-
-   let j = words.length - 1
-   for (let i = 0; i < words.length / 2; i++) {
-      // continue statement
-      words[i].split('').every((char) => char)
-      j--
-   }
+   // let j = words.length - 1
+   // for (let i = 0; i < words.length / 2; i++) {
+   //    // continue statement
+   //    words[i].split('').every((char) => char)
+   //    j--
+   // }
 
    return [].length
 }
