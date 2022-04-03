@@ -22,12 +22,17 @@ hamburger.addEventListener('click', () => {
 // "a" = 1, "b" = 2, etc. = 26 (not zero indexed)
 
 function alphabetPosition(text: string) {
-   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
-   const textSplit = text.replace(/\W/g, '').toLowerCase().split('')
-   const results = textSplit.map(
-      (letter) => alphabet.findIndex((l) => l === letter) + 1
-   )
-   return results.join(' ')
+   const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+   const textTrimmed = text.replace(/\W/g, '').toLowerCase()
+   const results = []
+
+   for (let i = 0; i < textTrimmed.length; i++) {
+      const curr = textTrimmed[i]
+      const idx = alphabet.indexOf(curr)
+      results.push(idx + 1)
+   }
+
+   return results
 }
 
 console.log(alphabetPosition("The sunset sets at twelve o' clock.")) // "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
