@@ -24,9 +24,11 @@ hamburger.addEventListener('click', () => {
 
 function solution(num: number) {
    if (num < 0) return 0
-   let total: number
+   let total = 0
    for (let i = 1; i < num; i++) {
       if (i % 3 === 0 || i % 5 === 0) total += i
    }
    return total
 }
+
+console.log(solution(10)) // 23
