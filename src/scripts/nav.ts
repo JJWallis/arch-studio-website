@@ -17,22 +17,11 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-function countConsistentStrings(allowed: string, words: string[]): number {
-   const regex = new RegExp(`[{${allowed}}]`, 'g')
-   return words.filter((word) => word.match(regex).length === word.length)
-      .length
+// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23
+// Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in
+// Additionally, if the number is negative, return 0 (for languages that do have them)
+// Note: If the number is a multiple of both 3 and 5, only count it once
 
-   // const desiredChars = allowed.split('')
-   // const results = []
-   // if words.length odd = mutate 1st value + check immediately then run loop below
-   // let j = words.length - 1
-   // for (let i = 0; i < words.length / 2; i++) {
-   //    // continue statement
-   //    words[i].split('').every((char) => char)
-   //    j--
-   // }
-
-   return [].length
+function solution(num: number) {
+   if (num < 0) return 0
 }
-
-console.log(countConsistentStrings('ab', ['ad', 'bd', 'aaab', 'baa', 'badab'])) // 2
