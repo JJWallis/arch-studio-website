@@ -17,44 +17,13 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-let data: any
+// produce two lists - one with all the names of the characters who appeared in the given film in alphabetical order
+// second - with all the films in which the given character appeared, in the alphabetical order
+// It's really important to URL encode the film title and chatacter name before calling the API
+// https://challenges.hackajob.co/swapi/api/people/?search= + character
+// https://challenges.hackajob.co/swapi/api/films/?search= + film
 
-const fetchData = async (endpoint: string) => {
-   try {
-      const res = await fetch(endpoint)
-      const data = await res.json()
-      return data
-   } catch (error) {
-      console.error(error)
-   }
+function run(film: string, character: string) {
+   let filmsAndCharacters: string = ''
+   return filmsAndCharacters
 }
-
-const run = async (teamKey: string) => {
-   try {
-      const { rounds } = await fetchData(
-         'https://s3.eu-west-1.amazonaws.com/hackajob-assets1.p.hackajob/challenges/football_session/football.json'
-      )
-      const matches = rounds.map(({ matches }) => matches)
-      const games = matches.map(([game]) => game)
-      const desiredTeam = games.filter(
-         (game) => game.team1.key === teamKey || game.team2.key === teamKey
-      )
-      const results = desiredTeam.map((team) => {
-         let target: number
-         target = team.team1.key === teamKey ? 1 : 2
-         return team[`score${target}`]
-      })
-      return results.reduce((acc, curr) => acc + curr, 0)
-   } catch (error) {
-      console.error(error)
-   }
-}
-
-;(async function () {
-   try {
-      const body = await run('arsenal')
-      data = body
-   } catch (error) {
-      console.error(error)
-   }
-})()
