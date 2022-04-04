@@ -17,11 +17,8 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-function maxProductDifference(nums: number[]): number {
-   const sorted = nums.sort()
-   let i = sorted.length - 1
-   const total = sorted[i] * sorted[i - 1] - sorted[0] * sorted[1]
-   return total
+function uniqueMorseRepresentations(words: string[]): number {
+   return 0
 }
 
-console.log(maxProductDifference([5, 6, 2, 7, 4]))
+console.log(uniqueMorseRepresentations(['gin', 'zen', 'gig', 'msg'])) // 2
