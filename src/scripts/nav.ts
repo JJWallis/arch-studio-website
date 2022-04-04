@@ -34,12 +34,15 @@ const run = async (teamKey: string) => {
       )
       const matches = rounds.map(({ matches }) => matches)
       const games = matches.map(([game]) => game)
-      const teams = games.map(({ team1, team2 }) => ({ team1, team2 }))
-      const desiredTeam = teams.filter(
-         ({ team1, team2 }) => team1.key === teamKey || team2.key === teamKey
+      const desiredTeam = games.filter(
+         (game) => game.team1.key === teamKey || game.team2.key === teamKey
       )
-      console.log(desiredTeam)
-      // return goalsTotal
+      const results = desiredTeam.map((team) => {
+         let target: number
+         target = team.team1.key === teamKey ? 1 : 2
+         return team[`score${target}`]
+      })
+      console.log(results.reduce((acc, curr) => acc + curr, 0))
    } catch (error) {
       console.error(error)
    }
