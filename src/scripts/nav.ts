@@ -17,7 +17,47 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
+const morseCode = [
+   '.-',
+   '-...',
+   '-.-.',
+   '-..',
+   '.',
+   '..-.',
+   '--.',
+   '....',
+   '..',
+   '.---',
+   '-.-',
+   '.-..',
+   '--',
+   '-.',
+   '---',
+   '.--.',
+   '--.-',
+   '.-.',
+   '...',
+   '-',
+   '..-',
+   '...-',
+   '.--',
+   '-..-',
+   '-.--',
+   '--..',
+]
+
 function uniqueMorseRepresentations(words: string[]): number {
+   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
+   const results = words.map((word) => {
+      const curr = word.split('')
+      return curr
+         .map((letter) => {
+            const idx = alphabet.findIndex((l) => letter === l)
+            return morseCode[idx]
+         })
+         .join('')
+   })
+   console.log(results)
    return 0
 }
 
