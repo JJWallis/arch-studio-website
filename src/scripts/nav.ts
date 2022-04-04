@@ -16,3 +16,9 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
+
+function maxProductDifference(nums: number[]): number {
+   return 0
+}
+
+console.log(maxProductDifference([5, 6, 2, 7, 4]))
