@@ -17,22 +17,24 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-// In this kata you are required to, given a string, replace every letter with its position in the alphabet.
-// If anything in the text isn't a letter, ignore it and don't return it. continue statement
-// "a" = 1, "b" = 2, etc. = 26 (not zero indexed)
-
-function alphabetPosition(text: string) {
-   const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-   const textTrimmed = text.replace(/\W/g, '').toLowerCase()
-   const results = []
-
-   for (let i = 0; i < textTrimmed.length; i++) {
-      const curr = textTrimmed[i]
-      const idx = alphabet.indexOf(curr)
-      results.push(idx + 1)
+const fetchData = async (endpoint: string) => {
+   try {
+      const res = await fetch(endpoint)
+      const data = await res.json()
+      return data
+   } catch (error) {
+      console.error(error)
    }
-
-   return results
 }
 
-console.log(alphabetPosition("The sunset sets at twelve o' clock.")) // "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+const run = async (teamKey: string) => {
+   try {
+      const data = await fetchData(
+         'https://s3.eu-west-1.amazonaws.com/hackajob-assets1.p.hackajob/challenges/football_session/football.json'
+      )
+      let goals: number = 0
+      return goals
+   } catch (error) {
+      console.error(error)
+   }
+}
