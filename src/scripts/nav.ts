@@ -16,35 +16,3 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
-
-// produce two lists - one with all the names of the characters who appeared in the given film in alphabetical order
-// second - with all the films in which the given character appeared, in the alphabetical order
-// It's really important to URL encode the film title and chatacter name before calling the API
-// https://challenges.hackajob.co/swapi/api/people/?search= + character
-// https://challenges.hackajob.co/swapi/api/films/?search= + film
-
-const fetchData = async (endpoint: string) => {
-   try {
-      const res = await fetch(endpoint)
-      const data = await res.json()
-      return data
-   } catch (error) {
-      console.error(error)
-   }
-}
-
-const run = async (film: string, character: string) => {
-   try {
-      const characters = await fetchData(
-         `https://challenges.hackajob.co/swapi/api/people/?search=${character}`
-      )
-      const films = await fetchData(
-         `https://challenges.hackajob.co/swapi/api/films/?search=${film}`
-      )
-   } catch (error) {
-      console.error(error)
-   }
-
-   let filmsAndCharacters = ''
-   return filmsAndCharacters
-}
