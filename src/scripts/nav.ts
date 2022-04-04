@@ -29,12 +29,20 @@ const fetchData = async (endpoint: string) => {
 
 const run = async (teamKey: string) => {
    try {
-      const data = await fetchData(
+      const { rounds } = await fetchData(
          'https://s3.eu-west-1.amazonaws.com/hackajob-assets1.p.hackajob/challenges/football_session/football.json'
       )
-      let goals: number = 0
-      return goals
+      const matches = rounds.map(({ matches }) => matches)
+      const games = matches.map(([game]) => game)
+      const teams = games.map(({ team1, team2 }) => ({ team1, team2 }))
+      const desiredTeam = teams.filter(
+         ({ team1, team2 }) => team1.key === teamKey || team2.key === teamKey
+      )
+      console.log(desiredTeam)
+      // return goalsTotal
    } catch (error) {
       console.error(error)
    }
 }
+
+run('arsenal')
