@@ -57,8 +57,7 @@ function uniqueMorseRepresentations(words: string[]): number {
          })
          .join('')
    })
-   console.log(results)
-   return 0
+   return new Set(results).size
 }
 
 console.log(uniqueMorseRepresentations(['gin', 'zen', 'gig', 'msg'])) // 2
