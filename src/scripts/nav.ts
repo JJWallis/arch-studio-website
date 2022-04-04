@@ -47,17 +47,14 @@ const morseCode = [
 ]
 
 function uniqueMorseRepresentations(words: string[]): number {
-   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
+   const alphabet = 'abcdefghijklmnopqrstuvwxyz'
    const results = words.map((word) => {
-      const curr = word.split('')
-      return curr
-         .map((letter) => {
-            const idx = alphabet.findIndex((l) => letter === l)
-            return morseCode[idx]
-         })
-         .join('')
+      const curr = word.split('') // imperative loop here
+      return curr.map((letter) => morseCode[alphabet.indexOf(letter)]).join('')
    })
    return new Set(results).size
 }
+
+// replace method?
 
 console.log(uniqueMorseRepresentations(['gin', 'zen', 'gig', 'msg'])) // 2
