@@ -23,7 +23,28 @@ hamburger.addEventListener('click', () => {
 // https://challenges.hackajob.co/swapi/api/people/?search= + character
 // https://challenges.hackajob.co/swapi/api/films/?search= + film
 
-function run(film: string, character: string) {
-   let filmsAndCharacters: string = ''
+const fetchData = async (endpoint: string) => {
+   try {
+      const res = await fetch(endpoint)
+      const data = await res.json()
+      return data
+   } catch (error) {
+      console.error(error)
+   }
+}
+
+const run = async (film: string, character: string) => {
+   try {
+      const characters = await fetchData(
+         `https://challenges.hackajob.co/swapi/api/people/?search=${character}`
+      )
+      const films = await fetchData(
+         `https://challenges.hackajob.co/swapi/api/films/?search=${film}`
+      )
+   } catch (error) {
+      console.error(error)
+   }
+
+   let filmsAndCharacters = ''
    return filmsAndCharacters
 }
