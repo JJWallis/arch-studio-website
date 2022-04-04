@@ -17,6 +17,8 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
+let data: any
+
 const fetchData = async (endpoint: string) => {
    try {
       const res = await fetch(endpoint)
@@ -42,10 +44,17 @@ const run = async (teamKey: string) => {
          target = team.team1.key === teamKey ? 1 : 2
          return team[`score${target}`]
       })
-      console.log(results.reduce((acc, curr) => acc + curr, 0))
+      return results.reduce((acc, curr) => acc + curr, 0)
    } catch (error) {
       console.error(error)
    }
 }
 
-run('arsenal')
+;(async function () {
+   try {
+      const body = await run('arsenal')
+      data = body
+   } catch (error) {
+      console.error(error)
+   }
+})()
