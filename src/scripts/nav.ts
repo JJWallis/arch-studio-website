@@ -48,13 +48,13 @@ const morseCode = [
 
 function uniqueMorseRepresentations(words: string[]): number {
    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-   const results = words.map((word) => {
-      const curr = word.split('') // imperative loop here
-      return curr.map((letter) => morseCode[alphabet.indexOf(letter)]).join('')
-   })
+   const results = []
+   words.forEach((word) =>
+      results.push(
+         word.replace(/\w/gi, (char) => morseCode[alphabet.indexOf(char)])
+      )
+   )
    return new Set(results).size
 }
-
-// replace method?
 
 console.log(uniqueMorseRepresentations(['gin', 'zen', 'gig', 'msg'])) // 2
