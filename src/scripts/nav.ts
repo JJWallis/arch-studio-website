@@ -19,11 +19,8 @@ hamburger.addEventListener('click', () => {
 
 function maxProductDifference(nums: number[]): number {
    const sorted = nums.sort()
-   let total = 0
-   let j = sorted.length - 1
-   for (let i = 0; i < 1; i++)
-      total = sorted[i] * sorted[i + 1] - sorted[j] * sorted[j - 1]
-   console.log(total)
+   let i = sorted.length - 1
+   const total = sorted[i] * sorted[i - 1] - sorted[0] * sorted[1]
    return total
 }
 
