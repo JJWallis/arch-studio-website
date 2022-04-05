@@ -19,17 +19,11 @@ hamburger.addEventListener('click', () => {
 
 function diagonalSum(mat: number[][]): number {
    let total = 0
-   let k = 0
-   let j = mat.length - 1
-
-   for (let i = 0; i < mat.length; i++) {
+   for (let i = 0, k = 0, j = mat.length - 1; i < mat.length; i++, k++, j--) {
       const curr = mat[i]
       if (k === j) total += curr[k]
       else total += curr[k] + curr[j]
-      k++
-      j--
    }
-
    return total
 }
 
