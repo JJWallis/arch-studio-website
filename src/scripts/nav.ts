@@ -17,21 +17,16 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-function diagonalSum(mat: number[][]): number {
-   let total = 0
-   for (let i = 0, k = 0, j = mat.length - 1; i < mat.length; i++, k++, j--) {
-      const curr = mat[i]
-      if (k === j) total += curr[k]
-      else total += curr[k] + curr[j]
-   }
-   return total
+function largestAltitude(gain: number[]): number {
+   const results = gain.reduce(
+      (acc, curr, idx) => [
+         ...acc,
+         idx !== gain.length - 1 ? curr + gain[idx + 1] : curr,
+      ],
+      [0]
+   ) // not using zero
+   console.log(results)
+   return Math.max(...results)
 }
 
-console.log(
-   diagonalSum([
-      [1, 1, 1, 1],
-      [1, 1, 1, 1],
-      [1, 1, 1, 1],
-      [1, 1, 1, 1],
-   ])
-)
+console.log(largestAltitude([-5, 1, 5, 0, -7]))
