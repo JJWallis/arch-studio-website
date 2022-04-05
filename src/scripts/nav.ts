@@ -17,11 +17,16 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-function targetIndices(nums: number[], target: number): number[] {
-   const sorted = nums.sort()
-   const results = []
-   sorted.forEach((num, idx) => num === target && results.push(idx))
-   return results
+// centre point count once - if % 2 !== 0 - round up to nearest whole number
+
+function diagonalSum(mat: number[][]): number {
+   return 0
 }
 
-console.log(targetIndices([1, 2, 5, 2, 3], 2)) // [1, 2]
+console.log(
+   diagonalSum([
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9],
+   ])
+)
