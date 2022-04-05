@@ -17,19 +17,19 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-// centre point count once - if % 2 !== 0 - round up to nearest whole number
-
 function diagonalSum(mat: number[][]): number {
-   const primaryAxis = []
-   const secondaryAxis = []
-
+   const axis = []
+   let k = 0
    let j = mat.length - 1
    for (let i = 0; i < mat.length; i++) {
-      // code
+      const curr = mat[i]
+      axis.push(curr[k], curr[j])
+      k++
       j--
    }
-
-   return 0
+   if (mat[0].length % 2 !== 0) axis.splice(axis.length / 2, 1)
+   console.log(axis)
+   return axis.reduce((acc, curr) => acc + curr, 0)
 }
 
 console.log(
