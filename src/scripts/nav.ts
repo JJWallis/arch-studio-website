@@ -20,6 +20,15 @@ hamburger.addEventListener('click', () => {
 // centre point count once - if % 2 !== 0 - round up to nearest whole number
 
 function diagonalSum(mat: number[][]): number {
+   const primaryAxis = []
+   const secondaryAxis = []
+
+   let j = mat.length - 1
+   for (let i = 0; i < mat.length; i++) {
+      // code
+      j--
+   }
+
    return 0
 }
 
