@@ -19,12 +19,15 @@ hamburger.addEventListener('click', () => {
 
 function largestAltitude(gain: number[]): number {
    const results = gain.reduce(
-      (acc, curr, idx) => [
-         ...acc,
-         idx !== gain.length - 1 ? curr + gain[idx + 1] : curr,
-      ],
+      (acc, curr, idx) => {
+         const current = idx === 0 ? 0 : curr
+         return [
+            ...acc,
+            idx !== gain.length - 1 ? current + gain[idx + 1] : curr,
+         ]
+      },
       [0]
-   ) // not using zero
+   )
    console.log(results)
    return Math.max(...results)
 }
