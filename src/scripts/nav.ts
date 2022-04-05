@@ -18,18 +18,22 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function diagonalSum(mat: number[][]): number {
-   const axis = []
+   let total = 0
    let k = 0
    let j = mat.length - 1
+
    for (let i = 0; i < mat.length; i++) {
       const curr = mat[i]
-      axis.push(curr[k], curr[j])
+      if (k === j) {
+         total += curr[k]
+         continue
+      }
+      total += curr[k] + curr[j]
       k++
       j--
    }
-   if (mat[0].length % 2 !== 0) axis.splice(axis.length / 2, 1)
-   console.log(axis)
-   return axis.reduce((acc, curr) => acc + curr, 0)
+
+   return total
 }
 
 console.log(
