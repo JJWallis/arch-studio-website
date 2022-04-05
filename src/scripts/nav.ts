@@ -24,11 +24,8 @@ function diagonalSum(mat: number[][]): number {
 
    for (let i = 0; i < mat.length; i++) {
       const curr = mat[i]
-      if (k === j) {
-         total += curr[k]
-         continue
-      }
-      total += curr[k] + curr[j]
+      if (k === j) total += curr[k]
+      else total += curr[k] + curr[j]
       k++
       j--
    }
@@ -38,8 +35,9 @@ function diagonalSum(mat: number[][]): number {
 
 console.log(
    diagonalSum([
-      [1, 2, 3],
-      [4, 5, 6],
-      [7, 8, 9],
+      [1, 1, 1, 1],
+      [1, 1, 1, 1],
+      [1, 1, 1, 1],
+      [1, 1, 1, 1],
    ])
 )
