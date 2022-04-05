@@ -18,7 +18,10 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function targetIndices(nums: number[], target: number): number[] {
-   return []
+   const sorted = nums.sort()
+   const results = []
+   sorted.forEach((num, idx) => num === target && results.push(idx))
+   return results
 }
 
 console.log(targetIndices([1, 2, 5, 2, 3], 2)) // [1, 2]
