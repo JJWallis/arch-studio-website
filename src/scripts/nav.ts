@@ -16,16 +16,3 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
-
-function largestAltitude(gain: number[]): number {
-   const results = gain.reduce(
-      (acc, curr, idx) => {
-         const calculation = idx === 0 ? 0 + gain[idx] : curr + acc[idx]
-         return [...acc, calculation]
-      },
-      [0]
-   )
-   return Math.max(...results)
-}
-
-console.log(largestAltitude([-5, 1, 5, 0, -7]))
