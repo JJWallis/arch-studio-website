@@ -19,8 +19,9 @@ hamburger.addEventListener('click', () => {
 function repeatedNTimes(nums: number[]): number {
    const n = nums.length / 2
    const str = nums.join('')
-   const regex = /a/gi
+   const regex = new RegExp(`\\d{${n}}`, 'g')
    const match = str.match(regex)
+   console.log(regex, match)
    return 0
 }
 
