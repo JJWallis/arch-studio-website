@@ -17,7 +17,10 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function countNegatives(grid: number[][]): number {
-   return 0
+   let total = 0
+   for (let i = 0; i < grid.length; i++) {}
+
+   return total
 }
 
 console.log(
