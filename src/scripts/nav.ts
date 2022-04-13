@@ -9,10 +9,22 @@ hamburger.addEventListener('click', () => {
    console.log(status)
 })
 
-// OOP Style
 // easy to `understand` vs `maintainable` code vs shortest method
 // Understand problem (repeat it with diff words) - Asking `clarifying` questions (unclear requirements + edge cases)
 // devise a plan - take lager issue + break down into smaller
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
+
+function countNegatives(grid: number[][]): number {
+   return 0
+}
+
+console.log(
+   countNegatives([
+      [4, 3, 2, -1],
+      [3, 2, 1, -1],
+      [1, 1, -1, -2],
+      [-1, -1, -2, -3],
+   ])
+)
