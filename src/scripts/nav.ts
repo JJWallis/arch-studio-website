@@ -15,14 +15,3 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
-
-function repeatedNTimes(nums: number[]): number {
-   const n = nums.length / 2
-   const str = nums.join('')
-   const regex = new RegExp(`\\d{${n}}`, 'g')
-   const match = str.match(regex)
-   console.log(regex, match)
-   return 0
-}
-
-console.log(repeatedNTimes([1, 2, 3, 3]))
