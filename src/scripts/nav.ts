@@ -16,19 +16,8 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-function countNegatives(grid: number[][]): number {
-   let total = 0
-   for (let i = 0; i < grid.length; i++) {
-      total += grid[i].filter((num) => num < 0).length
-   }
-   return total
+function repeatedNTimes(nums: number[]): number {
+   return 0
 }
 
-console.log(
-   countNegatives([
-      [4, 3, 2, -1],
-      [3, 2, 1, -1],
-      [1, 1, -1, -2],
-      [-1, -1, -2, -3],
-   ])
-)
+console.log(repeatedNTimes([1, 2, 3, 3]))
