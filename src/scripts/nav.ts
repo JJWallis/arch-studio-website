@@ -17,6 +17,10 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function repeatedNTimes(nums: number[]): number {
+   const n = nums.length / 2
+   const str = nums.join('')
+   const regex = /a/gi
+   const match = str.match(regex)
    return 0
 }
 
