@@ -15,3 +15,9 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
+
+function finalPrices(prices: number[]): number[] {
+   return []
+}
+
+console.log(finalPrices([8, 4, 6, 2, 3]))
