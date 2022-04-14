@@ -17,7 +17,16 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function finalPrices(prices: number[]): number[] {
-   return []
+   const result = []
+   const length = prices.length
+
+   for (let i = 0, j = 1; i < length; i++) {
+      const curr = prices[i]
+      if (i === length) {
+         result.push(curr)
+         return result
+      }
+   }
 }
 
 console.log(finalPrices([8, 4, 6, 2, 3]))
