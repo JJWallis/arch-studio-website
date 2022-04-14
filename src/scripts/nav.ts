@@ -20,15 +20,14 @@ function finalPrices(prices: number[]): number[] {
    const result = []
    const length = prices.length
 
-   for (let i = 0; i < length; i++) {
-      const curr = prices[i]
-      if (i === length - 1) {
-         result.push(curr)
-         return result
-      }
-      const discount = prices.find((price, j) => j > i && price <= curr)
+   for (let i = 0, j = 0; i < length; i++) {
+      const curr = prices[j]
+      prices.shift()
+      const discount = prices.find((price) => price <= curr)
       result.push(discount ? curr - discount : curr)
+      j = 0
    }
+   return result
 }
 
 console.log(finalPrices([8, 4, 6, 2, 3]))
