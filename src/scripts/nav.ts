@@ -22,13 +22,12 @@ function finalPrices(prices: number[]): number[] {
 
    for (let i = 0; i < length; i++) {
       const curr = prices[i]
-      const discount = prices.find((price, j) => j > i && price <= curr)
-      console.log(discount)
-
-      if (i === length) {
+      if (i === length - 1) {
          result.push(curr)
          return result
       }
+      const discount = prices.find((price, j) => j > i && price <= curr)
+      result.push(discount ? curr - discount : curr)
    }
 }
 
