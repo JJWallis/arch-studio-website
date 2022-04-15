@@ -18,6 +18,7 @@ hamburger.addEventListener('click', () => {
 
 function kWeakestRows(mat: number[][], k: number): number[] {
    const totals = []
+   const results = []
 
    for (let i = 0; i < mat.length; i++) {
       const curr = mat[i]
@@ -28,11 +29,12 @@ function kWeakestRows(mat: number[][], k: number): number[] {
    for (let i = 0; i < totals.length; i++) {
       const nums = totals.filter((num) => typeof num === 'number')
       const min = Math.min(...nums)
+      const minIdx = totals.indexOf(min)
+      results.push(minIdx)
+      totals.splice(minIdx, 1, null)
    }
 
-   // console.log(totals)
-
-   return []
+   return results.splice(0, k)
 }
 
 console.log(
