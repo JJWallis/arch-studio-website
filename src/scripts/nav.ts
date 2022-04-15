@@ -17,16 +17,10 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function kWeakestRows(mat: number[][], k: number): number[] {
-   const totals = []
+   const totals = mat.map((row) => row.reduce((acc, num) => acc + num, 0))
    const results = []
 
-   for (let i = 0; i < mat.length; i++) {
-      const curr = mat[i]
-      const currTotal = curr.reduce((acc, num) => acc + num, 0)
-      totals.push(currTotal)
-   }
-
-   for (let i = 0; i < totals.length; i++) {
+   for (let i = 0; i < k; i++) {
       const nums = totals.filter((num) => typeof num === 'number')
       const min = Math.min(...nums)
       const minIdx = totals.indexOf(min)
@@ -34,7 +28,7 @@ function kWeakestRows(mat: number[][], k: number): number[] {
       totals.splice(minIdx, 1, null)
    }
 
-   return results.splice(0, k)
+   return results
 }
 
 console.log(
