@@ -17,6 +17,16 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function kWeakestRows(mat: number[][], k: number): number[] {
+   const totals = []
+
+   for (let i = 0; i < mat.length; i++) {
+      const curr = mat[i]
+      const currTotal = curr.reduce((acc, num) => acc + num, 0)
+      totals.push(currTotal)
+   }
+
+   console.log(totals)
+
    return []
 }
 
