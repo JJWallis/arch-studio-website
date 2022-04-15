@@ -25,7 +25,12 @@ function kWeakestRows(mat: number[][], k: number): number[] {
       totals.push(currTotal)
    }
 
-   console.log(totals)
+   for (let i = 0; i < totals.length; i++) {
+      const nums = totals.filter((num) => typeof num === 'number')
+      const min = Math.min(...nums)
+   }
+
+   // console.log(totals)
 
    return []
 }
