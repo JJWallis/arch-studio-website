@@ -16,18 +16,19 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-function finalPrices(prices: number[]): number[] {
-   const result = []
-   const length = prices.length
-
-   for (let i = 0, j = 0; i < length; i++) {
-      const curr = prices[j]
-      prices.shift()
-      const discount = prices.find((price) => price <= curr)
-      result.push(discount ? curr - discount : curr)
-      j = 0
-   }
-   return result
+function kWeakestRows(mat: number[][], k: number): number[] {
+   return []
 }
 
-console.log(finalPrices([8, 4, 6, 2, 3]))
+console.log(
+   kWeakestRows(
+      [
+         [1, 1, 0, 0, 0],
+         [1, 1, 1, 1, 0],
+         [1, 0, 0, 0, 0],
+         [1, 1, 0, 0, 0],
+         [1, 1, 1, 1, 1],
+      ],
+      3
+   )
+)
