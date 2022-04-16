@@ -17,6 +17,11 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function findFinalValue(nums: number[], original: number): number {
+   const results = nums.reduce(() => {
+      // code
+      return 0
+   }, original)
+
    return 0
 }
 
