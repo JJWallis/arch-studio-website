@@ -15,3 +15,9 @@ hamburger.addEventListener('click', () => {
 // execute plan - from outline of plan via comments
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
+
+function heightChecker(heights: number[]) {
+   const heightsSorted = heights.sort()
+
+   return 0
+}
