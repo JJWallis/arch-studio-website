@@ -17,12 +17,15 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function findFinalValue(nums: number[], original: number): number {
-   const results = nums.reduce((acc) => {
-      const foundNum = nums.find((num) => num === acc)
-      return foundNum * 2 || acc
-   }, original)
+   let result = original
 
-   return 0
+   for (let i = 0; i < nums.length; i++) {
+      const numFound = nums.find((num) => num === result)
+      if (!numFound) return result
+      result = numFound * 2
+   }
+
+   return result
 }
 
 console.log(findFinalValue([5, 3, 6, 1, 12], 3))
