@@ -17,7 +17,14 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function heightChecker(heights: number[]) {
-   const heightsSorted = heights.sort()
+   const heightsSorted = [...heights].sort()
+   let totalDifferences = 0
 
-   return 0
+   for (let i = 0; i < heights.length; i++) {
+      if (heights[i] !== heightsSorted[i]) totalDifferences++
+   }
+
+   return totalDifferences
 }
+
+console.log(heightChecker([1, 1, 4, 2, 1, 3]))
