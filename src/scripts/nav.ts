@@ -17,9 +17,9 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function findFinalValue(nums: number[], original: number): number {
-   const results = nums.reduce(() => {
-      // code
-      return 0
+   const results = nums.reduce((acc) => {
+      const foundNum = nums.find((num) => num === acc)
+      return foundNum * 2 || acc
    }, original)
 
    return 0
