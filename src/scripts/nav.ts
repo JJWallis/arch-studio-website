@@ -6,7 +6,6 @@ const navMb = document.querySelector('.nav--pm') as HTMLElement
 hamburger.addEventListener('click', () => {
    const status = navMb.getAttribute('data-visible')
    navMb.setAttribute('data-visible', status === 'true' ? 'false' : 'true')
-   console.log(status)
 })
 
 // easy to `understand` vs `maintainable` code vs shortest method
