@@ -15,16 +15,6 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-function findFinalValue(nums: number[], original: number): number {
-   let result = original
-
-   for (let i = 0; i < nums.length; i++) {
-      const numFound = nums.find((num) => num === result)
-      if (!numFound) return result
-      result = numFound * 2
-   }
-
-   return result
+function countWords(words1: string[], words2: string[]): number {
+   return 0
 }
-
-console.log(findFinalValue([5, 3, 6, 1, 12], 3))
