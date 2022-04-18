@@ -17,8 +17,13 @@ hamburger.addEventListener('click', () => {
 
 function countWords(words1: string[], words2: string[]): number {
    const wordsJoined = words2.join(' ')
-   console.log(wordsJoined)
+
    return 0
 }
 
-console.log(countWords(['hello', 'world'], ['hello', 'world']))
+console.log(
+   countWords(
+      ['leetcode', 'is', 'amazing', 'as', 'is'],
+      ['amazing', 'leetcode', 'is']
+   )
+)
