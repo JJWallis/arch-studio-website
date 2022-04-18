@@ -17,16 +17,7 @@ hamburger.addEventListener('click', () => {
 
 function countWords(words1: string[], words2: string[]): number {
    const allWords = [...words1, ...words2]
-   const wordsToSearch = [...allWords]
    let total = 0
-
-   console.log(allWords)
-
-   allWords.forEach((word) => {
-      wordsToSearch.shift()
-      if (!wordsToSearch.includes(word)) total += 1
-      // includes accepts fromIndex as 2nd param
-   })
 
    // const wordToMatch = words2.join(' ')
 
