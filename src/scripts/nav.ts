@@ -16,5 +16,9 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function countWords(words1: string[], words2: string[]): number {
+   const wordsJoined = words2.join(' ')
+   console.log(wordsJoined)
    return 0
 }
+
+console.log(countWords(['hello', 'world'], ['hello', 'world']))
