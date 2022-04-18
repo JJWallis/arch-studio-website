@@ -16,14 +16,18 @@ hamburger.addEventListener('click', () => {
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
 function countWords(words1: string[], words2: string[]): number {
+   const wordsCopy = [...words1, ...words2]
+
    const wordToMatch = words2.join(' ')
    let total = 0
 
    words1.forEach((word) => {
       const regex = new RegExp(word, 'gi')
+      const deleted = words1.shift()
+      console.log(regex, deleted)
       const match = wordToMatch.match(regex)
-      console.log(match)
-      if (match.length === 1) total + 1
+      // console.log(match && match.length)
+      if (match && match.length === 1) total + 1
    })
 
    return total
