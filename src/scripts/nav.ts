@@ -21,8 +21,9 @@ function countWords(words1: string[], words2: string[]): number {
 
    words1.forEach((word) => {
       const regex = new RegExp(word, 'gi')
-      const matchLength = wordToMatch.match(regex).length
-      if (matchLength === 1) total + 1
+      const match = wordToMatch.match(regex)
+      console.log(match)
+      if (match.length === 1) total + 1
    })
 
    return total
