@@ -25,7 +25,7 @@ function countWords(words1: string[], words2: string[]): number {
       const word1Match = words1Str.match(regex)
       const word2Match = words2Str.match(regex)
       const totalLength = word1Match?.length + word2Match?.length
-      if (totalLength === 2) total + 1
+      if (totalLength === 2) total += 1
    })
 
    return total
