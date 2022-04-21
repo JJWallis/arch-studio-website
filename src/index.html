@@ -11,13 +11,23 @@
       />
       <title>Arch Studio</title>
       <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js" />
-      <script src="./scripts/nav.ts" defer></script>
+      <!-- <script src="./scripts/nav.ts" defer></script> -->
       <script
          async
          custom-element="amp-carousel"
          src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"
       ></script>
       <script async src="https://cdn.ampproject.org/v0.js"></script>
+      <script
+         async
+         custom-element="amp-form"
+         src="https://cdn.ampproject.org/v0/amp-form-0.1.js"
+      ></script>
+      <script
+         async
+         custom-template="amp-mustache"
+         src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
+      ></script>
       <script
          async
          custom-element="amp-youtube"
@@ -214,6 +224,29 @@
             <!-- position absolute btns - will respect grid col/row still -->
 
             <!-- AMP -->
+
+            <form
+               method="post"
+               action-xhr="https://jsonplaceholder.typicode.com/posts"
+            >
+               <input name="title" value="fake title" />
+               <input name="body" value="fake body" />
+               <div submit-success>
+                  <template type="amp-mustache">
+                     Success! Thanks {{name}} for trying the
+                     <code>amp-form</code> demo! Try to insert the word "error"
+                     as a name input in the form to see how
+                     <code>amp-form</code> handles errors.
+                  </template>
+               </div>
+               <div submit-error>
+                  <template type="amp-mustache">
+                     Error! Thanks {{name}} for trying the
+                     <code>amp-form</code> demo with an error response.
+                  </template>
+               </div>
+               <button type="submit">Submit</button>
+            </form>
 
             <div class="hero-pm__images">
                <amp-carousel
