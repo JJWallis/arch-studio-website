@@ -15,6 +15,14 @@ hamburger.addEventListener('click', () => {
 // what do I currently know
 // review solution - better approach? + `refactor` for readability, extensibility, re-usability, and performance
 
-function findMiddleIndex(nums: number[]): number {
-   return 0
+function findMiddleIndex(nums: number[]) {
+   for (let i = 0; i < nums.length; i++) {
+      const curr = nums[i]
+      const leftArr = nums.slice(0, i)
+      const rightArr = nums.slice(i, nums.length - 1)
+
+      if (!leftArr.length || !rightArr.length) continue
+   }
 }
+
+console.log(findMiddleIndex([2, 3, -1, 8, 4])) // 3
