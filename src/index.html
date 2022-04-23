@@ -186,7 +186,24 @@
          </div>
       </header>
 
-      <amp-analytics></amp-analytics>
+      <amp-analytics>
+         <script type="application/json">
+            {
+               "vars": {
+                  "account": "UA-YYYY-Y"
+               },
+               "triggers": {
+                  "default pageview": {
+                     "on": "visible",
+                     "request": "pageview",
+                     "vars": {
+                        "title": "Name of the Article"
+                     }
+                  }
+               }
+            }
+         </script>
+      </amp-analytics>
 
       <!-- AMP -->
 
