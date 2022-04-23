@@ -177,228 +177,88 @@
       <!-- / header -->
 
       <main id="main-content" class="main">
-      
-            <!-- AMP -->
+         <!-- AMP -->
 
-            <form
-               method="post"
-               action-xhr="https://jsonplaceholder.typicode.com/posts"
-            >
-               <input name="title" value="fake title" />
-               <input name="body" value="fake body" />
-               <div submit-success>
-                  <template type="amp-mustache">
-                     Success! Thanks {{id}} for trying the
-                     <code>amp-form</code> demo! Try to insert the word "error"
-                     as a name input in the form to see how
-                     <code>amp-form</code> handles errors.
-                  </template>
-               </div>
-               <div submit-error>
-                  <template type="amp-mustache">
-                     Error! Thanks {{id}} for trying the
-                     <code>amp-form</code> demo with an error response.
-                  </template>
-               </div>
-               <button type="submit">Submit</button>
-            </form>
-
-            <div class="hero-pm__images">
-               <amp-carousel
-                  id="hero-carousel"
-                  layout="responsive"
-                  width="500"
-                  height="500"
-                  type="slides"
-                  role="region"
-                  aria-label="hero carousel"
-               >
-                  <amp-img
-                     src="./assets/home/desktop/image-hero-paramour.jpg"
-                     layout="responsive"
-                     id="paramour-image"
-                     data-visible="true"
-                     width="100"
-                     height="100"
-                  >
-                  </amp-img>
-                  <amp-img
-                     src="./assets/home/desktop/image-hero-seraph.jpg"
-                     layout="responsive"
-                     id="seraph-image"
-                     data-visible="false"
-                     width="100"
-                     height="100"
-                  >
-                  </amp-img>
-                  <amp-img
-                     src="./assets/home/desktop/image-hero-federal.jpg"
-                     width="100"
-                     height="100"
-                     layout="responsive"
-                     id="federal-image"
-                     data-visible="false"
-                  >
-                  </amp-img>
-                  <amp-img
-                     src="./assets/home/desktop/image-hero-trinity.jpg"
-                     width="100"
-                     height="100"
-                     layout="responsive"
-                     id="trinity-image"
-                     data-visible="false"
-                  >
-                  </amp-img>
-               </amp-carousel>
+         <form
+            method="post"
+            action-xhr="https://jsonplaceholder.typicode.com/posts"
+         >
+            <input name="title" value="fake title" />
+            <input name="body" value="fake body" />
+            <div submit-success>
+               <template type="amp-mustache">
+                  Success! Thanks {{id}} for trying the
+                  <code>amp-form</code> demo! Try to insert the word "error" as
+                  a name input in the form to see how
+                  <code>amp-form</code> handles errors.
+               </template>
             </div>
+            <div submit-error>
+               <template type="amp-mustache">
+                  Error! Thanks {{id}} for trying the
+                  <code>amp-form</code> demo with an error response.
+               </template>
+            </div>
+            <button type="submit">Submit</button>
+         </form>
 
-            <amp-youtube
-               data-videoid="mGENRKrdoGY"
+         <div class="hero-pm__images">
+            <amp-carousel
+               id="hero-carousel"
                layout="responsive"
-               width="480"
-               height="270"
-            ></amp-youtube>
-
-            <!--  / AMP -->
-
-            <div
-               role="tabpanel"
-               id="paramour-project"
-               class="hero-pm__body hero-pm__body-1"
+               width="500"
+               height="500"
+               type="slides"
+               role="region"
+               aria-label="hero carousel"
             >
-               <h1>Project Paramour</h1>
-               <p class="desc">
-                  Project made for an art museum near Southwest London. Project
-                  Paramour is a statement of bold, modern architecture.
-               </p>
-               <a href="./portfolio.html" class="btn btn--link"
-                  >See Our Portfolio</a
+               <amp-img
+                  src="./assets/home/desktop/image-hero-paramour.jpg"
+                  layout="responsive"
+                  id="paramour-image"
+                  data-visible="true"
+                  width="100"
+                  height="100"
                >
-            </div>
-            <!-- / paramour -->
-            <div
-               hidden
-               role="tabpanel"
-               id="seraph-project"
-               class="hero-pm__body hero-pm__body-2"
-            >
-               <h2>Seraph Station</h2>
-               <p class="desc">
-                  The Seraph Station project challenged us to design a unique
-                  station that would transport people through time. The result
-                  is a fresh and futuristic model inspired by space stations.
-               </p>
-               <a href="./portfolio.html">See Our Portfolio</a>
-            </div>
-            <!-- / seraph -->
-            <div
-               hidden
-               role="tabpanel"
-               id="federal-project"
-               class="hero-pm__body hero-pm__body-3"
-            >
-               <h2>Federal II Tower</h2>
-               <p class="desc">
-                  A sequel theme project for a tower originally built in the
-                  1800s. We achieved this with a striking look of brutal
-                  minimalism with modern touches.
-               </p>
-               <a href="./portfolio.html">See Our Portfolio</a>
-            </div>
-            <!-- / federal -->
-            <div
-               hidden
-               role="tabpanel"
-               id="trinity-project"
-               class="hero-pm__body hero-pm__body-4"
-            >
-               <h2>Trinity Bank Tower</h2>
-               <p class="desc">
-                  Trinity Bank challenged us to make a concept for a 84 story
-                  building located in the middle of a city with a high
-                  earthquake frequency. For this project we used curves to blend
-                  design and stability to meet our objectives.
-               </p>
-               <a href="./portfolio.html">See Our Portfolio</a>
-            </div>
-            <!-- / trinity -->
-         </article>
-         <!-- / hero-pm -->
+               </amp-img>
+               <amp-img
+                  src="./assets/home/desktop/image-hero-seraph.jpg"
+                  layout="responsive"
+                  id="seraph-image"
+                  data-visible="false"
+                  width="100"
+                  height="100"
+               >
+               </amp-img>
+               <amp-img
+                  src="./assets/home/desktop/image-hero-federal.jpg"
+                  width="100"
+                  height="100"
+                  layout="responsive"
+                  id="federal-image"
+                  data-visible="false"
+               >
+               </amp-img>
+               <amp-img
+                  src="./assets/home/desktop/image-hero-trinity.jpg"
+                  width="100"
+                  height="100"
+                  layout="responsive"
+                  id="trinity-image"
+                  data-visible="false"
+               >
+               </amp-img>
+            </amp-carousel>
+         </div>
 
-         <section
-            aria-labelledby="welcome-title"
-            class="welcome grid-ct ct-wrapper"
-         >
-            <div class="welcome__body">
-               <h3 id="welcome-title">Welcome</h3>
-               <p class="welcome__body__sub-title">Welcome to Arch Studio</p>
-               <div class="welcome__body__descs">
-                  <p class="desc">
-                     We have a unique network and skillset to help bring your
-                     projects to life. Our small team of highly skilled
-                     individuals combined with our large network put us in a
-                     strong position to deliver exceptional results.
-                  </p>
-                  <p class="desc">
-                     Over the past 10 years, we have worked on all kinds of
-                     projects. From stations to high-rise buildings, we create
-                     spaces that inspire and delight.
-                  </p>
-                  <p class="desc">
-                     We work closely with our clients so that we understand the
-                     intricacies of each project. This allows us to work in
-                     harmony the surrounding area to create truly stunning
-                     projects that will stand the test of time.
-                  </p>
-               </div>
-            </div>
-            <div class="welcome__image">
-               <img src="./assets/home/desktop/image-welcome.jpg" alt="" />
-            </div>
-         </section>
-         <!-- / welcome -->
+         <amp-youtube
+            data-videoid="mGENRKrdoGY"
+            layout="responsive"
+            width="480"
+            height="270"
+         ></amp-youtube>
 
-         <section
-            aria-labelledby="small-team-title"
-            class="small-team grid-ct ct-wrapper"
-         >
-            <div class="small-team__body">
-               <h4 id="small-team-title">Small team, big ideas</h4>
-               <a href="./about.html">About Us</a>
-            </div>
-         </section>
-         <!-- / small-team -->
-
-         <section aria-labelledby="featured-title" class="featured ct-wrapper">
-            <div class="featured__body">
-               <h4 id="featured-title">Featured</h4>
-               <div>
-                  <a href="./portfolio.html">See All</a>
-               </div>
-            </div>
-            <div class="portfolio grid-ct">
-               <!-- psudo els for numbers -->
-               <div class="portfolio__project portfolio__project--home">
-                  <div class="portfolio__project__body">
-                     <p>Project Del Sol</p>
-                     <a href="./portfolio.html">View All Projects</a>
-                  </div>
-               </div>
-               <div class="portfolio__project portfolio__project--home">
-                  <div class="portfolio__project__body">
-                     <p>228 Tower</p>
-                     <a href="./portfolio.html">View All Projects</a>
-                  </div>
-               </div>
-               <div class="portfolio__project portfolio__project--home">
-                  <div class="portfolio__project__body">
-                     <p>Le Prototype</p>
-                     <a href="./portfolio.html">View All Projects</a>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- / featured -->
+         <!--  / AMP -->
       </main>
       <!-- / main -->
 
